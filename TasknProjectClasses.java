@@ -11,7 +11,18 @@ class Task{
 		Pname = ProjectName;
 		Notes = Des;
 		Completed = false;
-		
+		public String getName() {
+			return Tname;
+		}	
+		public String getProName() {
+			return Pname;
+		}
+		public String getNotes() {
+			return Notes;
+		}
+		public Boolean getComp() {
+			return Completed;
+		}
 	}
 }
 
