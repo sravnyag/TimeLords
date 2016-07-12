@@ -53,7 +53,7 @@ public class DatabaseOperations extends SQLiteOpenHelper{
     public void addTask(Task task) {
 
         ContentValues values = new ContentValues();
-        values.put(CLASS, task.getParentClass());
+    //    values.put(CLASS, task.getParentClass());
         values.put(TASK_NAME, task.getName());
         values.put(PROJECT_NAME, task.getProName());
         values.put(NOTES, task.getNotes());
