@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">TP</string>
-
-    <string name="dummy_button">Dumb Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="title_activity_back_img">BackImg</string>
-    <string name="title_activity_edit_task">TaskName</string>
-</resources>
