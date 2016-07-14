@@ -35,18 +35,6 @@ public class HomeScreen extends AppCompatActivity {
         startActivity(intent1);
     }
 
-    public void show_hide() {
-        if (Gbl.hidden == Boolean.TRUE) {
-            Gbl.fab_task.show();
-            Gbl.fab_project.show();
-            Gbl.hidden = Boolean.FALSE;
-        } else {
-            Gbl.fab_task.hide();
-            Gbl.fab_project.hide();
-            Gbl.hidden = Boolean.TRUE;
-        }
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
