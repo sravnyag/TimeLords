@@ -1,5 +1,6 @@
 package com.example.bhouts.taskplanner;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
@@ -10,10 +11,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
 import 	android.graphics.Color;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
 
 public class HomeScreen extends AppCompatActivity {
+
+    OnClickListener listener1 = null;
+    Button button1;
+
 
 
     /*called when fab button pushed*/
@@ -27,6 +35,19 @@ public class HomeScreen extends AppCompatActivity {
         startActivity(intent1);
     }
 
+    public void show_hide() {
+        if (Gbl.hidden == Boolean.TRUE) {
+            Gbl.fab_task.show();
+            Gbl.fab_project.show();
+            Gbl.hidden = Boolean.FALSE;
+        } else {
+            Gbl.fab_task.hide();
+            Gbl.fab_project.hide();
+            Gbl.hidden = Boolean.TRUE;
+        }
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -34,8 +55,27 @@ public class HomeScreen extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        FloatingActionButton fab1 = (FloatingActionButton) findViewById(R.id.fab1);
+        Gbl.fab_task = (FloatingActionButton) findViewById(R.id.fab_task);
+        Gbl.fab_project = (FloatingActionButton) findViewById(R.id.fab_project);
+        Gbl.fab_show = (FloatingActionButton) findViewById(R.id.fab_show);
+        Gbl.fab_task.hide();
+        Gbl.fab_project.hide();
+        listener1 = new OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if (Gbl.hidden == Boolean.TRUE){
+                    Gbl.fab_task.show();
+                    Gbl.fab_project.show();
+                    Gbl.hidden = Boolean.FALSE;
+                }else {
+                    Gbl.fab_task.hide();
+                    Gbl.fab_project.hide();
+                    Gbl.hidden = Boolean.TRUE;
+                }
+
+            }
+        };
+        Gbl.fab_show.setOnClickListener(listener1);
     }
 
     @Override
