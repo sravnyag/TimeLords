@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/app_logo"
-        android:label="@string/app_name"
+        android:label="TP"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -30,6 +30,15 @@
         <activity
             android:name=".editProject"
             android:label="@string/title_activity_edit_project"
+            android:parentActivityName=".HomeScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.bhouts.taskplanner.HomeScreen" />
+        </activity>
+        <activity
+            android:name=".show_project"
+            android:label="@string/title_activity_show_project"
             android:parentActivityName=".HomeScreen"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

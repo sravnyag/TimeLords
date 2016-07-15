@@ -8,38 +8,34 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.bhouts.taskplanner.HomeScreen">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_home_screen" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fab_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="5dp"
+        android:src="@drawable/letter_t"
+        android:onClick="newTask" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|end"
+        app:fabSize="mini"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/letter_p"
+        android:onClick="newProject"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_input_add"
-        android:onClick="newTask" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|start"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_input_add"
-        android:onClick="newProject"/>
+        android:src="@drawable/plus" />
 
 </android.support.design.widget.CoordinatorLayout>

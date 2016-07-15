@@ -1,5 +1,6 @@
 package com.example.bhouts.taskplanner;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
@@ -10,10 +11,23 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import 	android.graphics.Color;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
+import android.widget.ListView;
+import java.util.ArrayList;
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ExpandableListView;
+
 
 public class HomeScreen extends AppCompatActivity {
+
+    OnClickListener listener1 = null;
+    Button button1;
 
 
     /*called when fab button pushed*/
@@ -27,15 +41,43 @@ public class HomeScreen extends AppCompatActivity {
         startActivity(intent1);
     }
 
+    private ExpandListAdapter ExpAdapter;
+    private ArrayList<ExpandListGroup> ExpListItems;
+    private ExpandableListView ExpandList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_home_screen);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        ExpandList = (ExpandableListView) findViewById(R.id.ExpList);
+        ExpListItems = SetStandardGroups();
+        ExpAdapter = new ExpandListAdapter(HomeScreen.this, ExpListItems);
+        ExpandList.setAdapter(ExpAdapter);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        FloatingActionButton fab1 = (FloatingActionButton) findViewById(R.id.fab1);
+
+        Gbl.fab_task = (FloatingActionButton) findViewById(R.id.fab_task);
+        Gbl.fab_project = (FloatingActionButton) findViewById(R.id.fab_project);
+        Gbl.fab_show = (FloatingActionButton) findViewById(R.id.fab_show);
+        Gbl.fab_task.hide();
+        Gbl.fab_project.hide();
+        listener1 = new OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if (Gbl.hidden == Boolean.TRUE){
+                    Gbl.fab_task.show();
+                    Gbl.fab_project.show();
+                    Gbl.hidden = Boolean.FALSE;
+                }else {
+                    Gbl.fab_task.hide();
+                    Gbl.fab_project.hide();
+                    Gbl.hidden = Boolean.TRUE;
+                }
+
+            }
+        };
+        Gbl.fab_show.setOnClickListener(listener1);
     }
 
     @Override
@@ -59,4 +101,47 @@ public class HomeScreen extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public ArrayList<ExpandListGroup> SetStandardGroups() {
+
+        ArrayList<ExpandListGroup> list = new ArrayList<ExpandListGroup>();
+
+        ArrayList<ExpandListChild> list2 = new ArrayList<ExpandListChild>();
+
+        ExpandListGroup gru1 = new ExpandListGroup();
+        gru1.setName("Projects");
+
+        ExpandListChild ch1_1 = new ExpandListChild();
+        ch1_1.setName("project1");
+        list2.add(ch1_1);
+        ExpandListChild ch1_2 = new ExpandListChild();
+        ch1_2.setName("project2");
+        list2.add(ch1_2);
+        ExpandListChild ch1_3 = new ExpandListChild();
+        ch1_3.setName("project3");
+        list2.add(ch1_3);
+        ExpandListChild ch1_4 = new ExpandListChild();
+        ch1_4.setName("project4");
+        list2.add(ch1_4);
+        ExpandListChild ch1_5 = new ExpandListChild();
+        ch1_5.setName("project5");
+        list2.add(ch1_5);
+        ExpandListChild ch1_6 = new ExpandListChild();
+        ch1_6.setName("project6");
+        list2.add(ch1_6);
+        ExpandListChild ch1_7 = new ExpandListChild();
+        ch1_7.setName("project7");
+        list2.add(ch1_7);
+        ExpandListChild ch1_8 = new ExpandListChild();
+        ch1_8.setName("project8");
+        list2.add(ch1_8);
+
+
+        gru1.setItems(list2);
+
+        list.add(gru1);
+
+        return list;
+    }
+
 }

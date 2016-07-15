@@ -1,34 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.bhouts.taskplanner.HomeScreen"
-    tools:showIn="@layout/activity_home_screen">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_alignParentTop="true"
-        android:paddingTop="@dimen/hs_header_vertical_spacing"
-        android:src="@drawable/app_logo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    <include layout="@layout/hs_top"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_above="@layout/hs_projectlist"/>
 
-    <ExpandableListView
-        android:layout_width="wrap_content"
+    <include layout="@layout/hs_links"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/expandableListView"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@layout/hs_top"
+        android:layout_above="@layout/hs_projectlist"/>
+
+    <include layout="@layout/hs_projectlist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@layout/hs_links"
+        android:layout_above="@layout/hs_bottom"/>
+
+    <include layout="@layout/hs_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@layout/hs_projectlist" />
 
 
-</RelativeLayout>
+
+</LinearLayout>
+

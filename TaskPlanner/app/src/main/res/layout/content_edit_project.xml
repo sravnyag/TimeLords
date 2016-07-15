@@ -7,6 +7,43 @@
     android:orientation="vertical"
     tools:context="com.example.bhouts.taskplanner.editProject">
 
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_above="@+id/projectName"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <EditText
+        android:id="@+id/projectName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/project_task_list"
+        android:layout_below="@+id/toolbar"
+        android:hint="@string/ProjectName_hint"
+        android:inputType="text"/>
+
+    <ListView
+        android:id="@+id/project_task_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/projectName"
+        android:layout_above="@+id/project_donet"/>
+
+    <Button
+        android:id="@+id/project_enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ENTER"
+        android:layout_below="@+id/project_task_list" />
 
 
 </LinearLayout>

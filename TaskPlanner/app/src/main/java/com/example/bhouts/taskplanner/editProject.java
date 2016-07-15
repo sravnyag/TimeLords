@@ -8,11 +8,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
 public class editProject extends  AppCompatActivity {
 
+    View.OnClickListener listen_project = null;
+    Button project_enter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,22 @@ public class editProject extends  AppCompatActivity {
         ListView list_of_tasks=(ListView) findViewById(R.id.project_task_list);
 
         list_of_tasks.setAdapter(myAdapter);
+
+
+        project_enter = (Button) findViewById(R.id.project_enter);
+
+        //when task_done button pushed, creates new Task instance
+        listen_project = new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                final EditText projectName =  (EditText) findViewById(R.id.projectName);
+                String projectName1 = projectName.getText().toString();
+
+                Project newProject = new Project(projectName1);
+            }
+        };
+        project_enter.setOnClickListener(listen_project);
 
     }
 
