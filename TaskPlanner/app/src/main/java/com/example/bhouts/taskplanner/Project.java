@@ -3,9 +3,13 @@ package com.example.bhouts.taskplanner;
 /**
  * Created by bhouts on 7/10/2016.
  */
-public class Project {
-    public Project(String projectName){
-        Task MyName = new Task(projectName,"",""); //cast String as Task so can add to te global projectlist "All"
-        Gbl.All.TaskList.add(MyName);
+public class Project extends ProjectList{
+
+    public Project(){
+        //add project to global ProjectList "All Projects"
+        Task task = new Task();
+        task.setName(task, ProjName);
+        task.setProject(task, "All Projects");
+        addTask(Gbl.allProjects, task);
     }
 }

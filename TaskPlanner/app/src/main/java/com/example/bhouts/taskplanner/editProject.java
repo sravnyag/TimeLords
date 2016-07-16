@@ -44,7 +44,8 @@ public class editProject extends  AppCompatActivity {
                 final EditText projectName =  (EditText) findViewById(R.id.projectName);
                 String projectName1 = projectName.getText().toString();
 
-                Project newProject = new Project(projectName1);
+                Project newProject = new Project();
+                newProject.setProjName(newProject, projectName1);
             }
         };
         project_enter.setOnClickListener(listen_project);
