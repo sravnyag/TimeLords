@@ -11,7 +11,6 @@ import javax.xml.datatype.Duration;
  */
 public interface TaskInterface {
 
-
     // setName
     // pre: none
     // post: adds name to initially empty Tname attribute in a task obj

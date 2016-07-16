@@ -8,7 +8,9 @@ import javax.xml.datatype.Duration;
  * Task.java
  * Created by bhouts on 7/10/2016.
  */
-public class Task{
+
+
+public class Task implements TaskInterface{
 
     // private inner Priority class
     private class Priority {
@@ -144,14 +146,13 @@ public class Task{
     // pre: none
     // post: adds tags to task obj
     // notes: allow for deletion of tags
-    public void editTags(Task task, String userInput){
+    public void editTags(Task task, String userInput) {
 
-        if ( userInput != null ){
+        if (userInput != null) {
             splitTags(task.tagList, userInput);
         } else {
             System.err.println("User Input may not be null");
         }
-
     }
 
     // isComplete
