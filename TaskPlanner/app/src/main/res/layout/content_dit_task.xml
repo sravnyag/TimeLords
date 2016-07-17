@@ -92,5 +92,25 @@
         android:layout_alignRight="@+id/priority_choice"
         android:layout_alignEnd="@+id/priority_choice" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/priority_level_text"
+        android:id="@+id/priority_level_textView"
+        android:layout_alignBottom="@+id/priority_choice"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/tag_text"
+        android:id="@+id/tag_textView"
+        android:layout_alignBottom="@+id/tag_choice"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 
 </RelativeLayout>

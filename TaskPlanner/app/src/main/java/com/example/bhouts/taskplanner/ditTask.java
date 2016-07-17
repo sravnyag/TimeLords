@@ -37,9 +37,9 @@ public class ditTask extends AppCompatActivity {
         spinner1.setAdapter(dataAdapter1);
 
         List<String> tag_list = new ArrayList<String>();
-        tag_list.add("priority 1");
-        tag_list.add("priority 2");
-        tag_list.add("priority 3");
+        tag_list.add("tag 1");
+        tag_list.add("tag 2");
+        tag_list.add("tag 3");
         ArrayAdapter<String> dataAdapter2 =
                 new ArrayAdapter<String>(this, android.R.layout
                         .simple_spinner_item, tag_list);
