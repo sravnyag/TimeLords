@@ -99,6 +99,11 @@ public class Task implements TaskInterface{
         dateDue = null;
     }
 
+    // setName - this
+    // pre: none
+    // post: sets name to initially empty Tname attribute in a task obj
+    public void setName(String userInput) {this.Tname = userInput; }
+
     // setName
     // pre: none
     // post: sets name to initially empty Tname attribute in a task obj
@@ -120,6 +125,13 @@ public class Task implements TaskInterface{
         task.Pname = userInput;
     }
 
+    // setDueDate - this
+    // pre: none
+    // post: sets DueDate attribute for a task obj
+    public void setDueDate(Date userInput){
+        this.dateDue = userInput;
+    }
+
     // setDueDate
     // pre: none
     // post: sets DueDate attribute for a task obj
@@ -132,6 +144,14 @@ public class Task implements TaskInterface{
     // post: sets Duration for a task obj
     public void setDuration(Task task, Duration userInput){
         task.duration = userInput;
+    }
+
+    // setPriority - this
+    // pre: none
+    // post: sets priority for a task obj
+    public void setPriority(String userInput){
+        Priority p = new Priority (userInput);
+        this.priority = p;
     }
 
     // setPriority
