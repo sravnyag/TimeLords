@@ -13,6 +13,10 @@ import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
 
 public class ditTask extends AppCompatActivity {
 
@@ -26,9 +30,9 @@ public class ditTask extends AppCompatActivity {
     public void populatePrioritySpinner(Spinner spinner1,
                                         Spinner spinner2) {
         List<String> priority_list = new ArrayList<String>();
-        priority_list.add("priority 1");
-        priority_list.add("priority 2");
-        priority_list.add("priority 3");
+        priority_list.add("High");
+        priority_list.add("Med");
+        priority_list.add("Low");
         ArrayAdapter<String> dataAdapter1 =
                 new ArrayAdapter<String>(this, android.R.layout
                         .simple_spinner_item, priority_list);
@@ -57,6 +61,11 @@ public class ditTask extends AppCompatActivity {
 
         task_enter = (Button) findViewById(R.id.task_enter);
 
+        // set example spinners
+        Spinner priority = (Spinner) findViewById(R.id.priority_choice);
+        Spinner tag = (Spinner) findViewById(R.id.tag_choice);
+        populatePrioritySpinner(priority, tag); // run test list
+
         //when task_done button pushed, creates new Task instance
         listen_task = new View.OnClickListener(){
             @Override
@@ -75,12 +84,31 @@ public class ditTask extends AppCompatActivity {
                 String notes1 = notes.getText().toString();
 
                 Task newTask = new Task();
+
+                // // creating new Task and setting its attributes
+                //setName
+                newTask.setName(((taskName.equals(null)) ? "no_name" :
+                        taskName1));
+                //set DueDate;
+                try {
+                    DateFormat format =
+                            new SimpleDateFormat("MM/dd/yyyy");
+                    String DueDateStr =
+                            ((EditText) findViewById(R.id.textDueDate))
+                                    .getText().toString();
+                    newTask.setDueDate(format.parse(DueDateStr));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                //set priorit level
+                String priorityStr =
+                        ((EditText) findViewById(R.id.notes))
+                                .getText().toString();
+                newTask.setPriority(((priorityStr.equals(null)) ?
+                        "no_name" :
+                        priorityStr));
             }
         };
         task_enter.setOnClickListener(listen_task);
-
-        Spinner priority = (Spinner) findViewById(R.id.priority_choice);
-        Spinner tag = (Spinner) findViewById(R.id.tag_choice);
-        populatePrioritySpinner(priority, tag); // run test list
     }
 }
