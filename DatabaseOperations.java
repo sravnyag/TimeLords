@@ -19,12 +19,12 @@ public class DatabaseOperations extends SQLiteOpenHelper{
     private static final String DATABASE_NAME = "assignmentDB.db";
     private static final String TABLE = "assignments";
     public static final String ID = "id";
-    public static final String CLASS = "class";
+    public static final String PROJECT = "project";
     public static final String TASK_NAME = "taskname";
     public static final String PROJECT_NAME = "projectname";
     public static final String NOTES = "notes";
     public static final String DUE_DATE = "duedate";
-   // public static final String COMPLETED = "completed";
+    public static final String COMPLETED = "completed";
 
     public DatabaseOperations(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DATABASE_NAME, factory, DATABASE_VERSION);
@@ -34,11 +34,11 @@ public class DatabaseOperations extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         String CREATE_TABLE_CLASS = "CREATE TABLE " + TABLE + "(" +
                 ID + " " + "INTEGER PRIMARY KEY," +
-                CLASS + " " + " TEXT," +
+                PROJECT + " " + " TEXT," +
                 TASK_NAME + " TEXT," +
                 PROJECT_NAME + "TEXT," +
                 NOTES + " TEXT," +
-                //COMPLETED + "TEXT," +
+                COMPLETED + "TEXT," +
                 DUE_DATE + " TEXT" + ")";
 
         db.execSQL(CREATE_TABLE_CLASS);
@@ -53,18 +53,27 @@ public class DatabaseOperations extends SQLiteOpenHelper{
     public void addTask(Task task) {
 
         ContentValues values = new ContentValues();
-    //    values.put(CLASS, task.getParentClass());
+        values.put(PROJECT, task.getParentClass());
         values.put(TASK_NAME, task.getName());
         values.put(PROJECT_NAME, task.getProName());
         values.put(NOTES, task.getNotes());
+        values.put(COMPLETED, task.getComp());
         values.put(DUE_DATE, task.getDueDate());
-        //Values.put(COMPLETED, task.getComp());
+        
 
         SQLiteDatabase db = this.getWritableDatabase();
 
         db.insert(TABLE, null, values);
         db.close();
     }
+    public Cursor getTasks(String Project) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String selectQuery = "SELECT * FROM " + TABLE + " WHERE " + PROJECT + " = '" + Project + "'";
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        cursor.moveToFirst();
+        return cursor;
+    }
+    
     public void changeName(String name, String newname) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -91,13 +100,13 @@ public class DatabaseOperations extends SQLiteOpenHelper{
 
 
     public void changeClass(String name, String newname) {
-        String query = "Select * FROM " + TABLE + " WHERE " + CLASS + " =  \"" + name + "\"";
+        String query = "Select * FROM " + TABLE + " WHERE " + PROJECT + " =  \"" + name + "\"";
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         ContentValues values = new ContentValues();
-        values.put(CLASS, newname);
+        values.put(PROJECT, newname);
         if(cursor.moveToFirst()) {
-            db.update(TABLE, values, CLASS + " = '" + name + "'", null);
+            db.update(TABLE, values, PROJECT + " = '" + name + "'", null);
         }
         cursor.close();
         db.close();
