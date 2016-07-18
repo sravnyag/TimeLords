@@ -104,44 +104,24 @@ public class HomeScreen extends AppCompatActivity {
 
     public ArrayList<ExpandListGroup> SetStandardGroups() {
 
-        ArrayList<ExpandListGroup> list = new ArrayList<ExpandListGroup>();
+        ArrayList<ExpandListGroup> grList = new ArrayList<ExpandListGroup>();
 
-        ArrayList<ExpandListChild> list2 = new ArrayList<ExpandListChild>();
+        ArrayList<ExpandListChild> chList = new ArrayList<ExpandListChild>();
 
-        ExpandListGroup gru1 = new ExpandListGroup();
-        gru1.setName("Projects");
+        ExpandListGroup grup = new ExpandListGroup();
+        grup.setName("Projects");
 
-        ExpandListChild ch1_1 = new ExpandListChild();
-        ch1_1.setName("project1");
-        list2.add(ch1_1);
-        ExpandListChild ch1_2 = new ExpandListChild();
-        ch1_2.setName("project2");
-        list2.add(ch1_2);
-        ExpandListChild ch1_3 = new ExpandListChild();
-        ch1_3.setName("project3");
-        list2.add(ch1_3);
-        ExpandListChild ch1_4 = new ExpandListChild();
-        ch1_4.setName("project4");
-        list2.add(ch1_4);
-        ExpandListChild ch1_5 = new ExpandListChild();
-        ch1_5.setName("project5");
-        list2.add(ch1_5);
-        ExpandListChild ch1_6 = new ExpandListChild();
-        ch1_6.setName("project6");
-        list2.add(ch1_6);
-        ExpandListChild ch1_7 = new ExpandListChild();
-        ch1_7.setName("project7");
-        list2.add(ch1_7);
-        ExpandListChild ch1_8 = new ExpandListChild();
-        ch1_8.setName("project8");
-        list2.add(ch1_8);
+        for (int i=0;i<Gbl.list_of_projects.size();i++){
+            ExpandListChild ch = new ExpandListChild();
+            ch.setName(Gbl.list_of_projects.get(i));
+            chList.add(ch);
+        }
 
+        grup.setItems(chList);
 
-        gru1.setItems(list2);
+        grList.add(grup);
 
-        list.add(gru1);
-
-        return list;
+        return grList;
     }
 
 }

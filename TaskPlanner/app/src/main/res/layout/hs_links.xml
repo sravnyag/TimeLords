@@ -41,6 +41,8 @@
         android:paddingTop="@dimen/link_pad_top"
         android:paddingLeft="@dimen/link_pad_left"
         android:gravity="left"
-        android:layout_below="@+id/qTasks_link" />
+        android:layout_below="@+id/qTasks_link"
+        android:layout_above="@+id/test" />
+
 
 </LinearLayout>

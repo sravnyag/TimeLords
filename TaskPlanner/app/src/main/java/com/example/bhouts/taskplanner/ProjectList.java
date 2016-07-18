@@ -50,4 +50,12 @@ public class ProjectList implements ProjectListInterface{
         }
     }
 
+    // hasTask
+    // pre: none
+    // post: returns true if project has task in
+    // notes:
+    public boolean hasTask(ProjectList proj, Task task){
+        return proj.TaskList.contains(task);
+    }
+
 }
