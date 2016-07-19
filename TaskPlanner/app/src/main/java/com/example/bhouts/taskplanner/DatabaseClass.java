@@ -1,4 +1,4 @@
-package com.example.jeffwag.sprint1;
+package com.example.bhouts.taskplanner;
 
 /**
  * Created by Jeffwag on 7/16/2016.
@@ -33,8 +33,8 @@ public class DatabaseClass extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase dB) {
         String CREATE_TABLE_CLASS = "CREATE TABLE " + TABLE + "(" +
                 COLUMN_ID + " " + "INTEGER PRIMARY KEY," +
-                COLUMN_NAME + " TEXT," +
-                COLUMN_QUANTITY + " INTEGER," + ")";
+                COLUMN_NAME + " TEXT," + ")";
+//                COLUMN_QUANTITY + " INTEGER," + ")";
 
 
         dB.execSQL(CREATE_TABLE_CLASS);
@@ -49,8 +49,8 @@ public class DatabaseClass extends SQLiteOpenHelper {
     public void addProject(Project mProject) {
 
         ContentValues values = new ContentValues();
-        values.put(COLUMN_NAME, mProject.getProjectName());
-        values.put(COLUMN_QUANTITY, mProject.getQuantity());
+        values.put(COLUMN_NAME, mProject.getProjName());
+//        values.put(COLUMN_QUANTITY, mProject.getQuantity());
 
 
         SQLiteDatabase db = this.getWritableDatabase();

@@ -76,4 +76,37 @@ public interface TaskInterface {
     // post: if complete, sets to incomplete--if incomplete sets to complete
     // notes: to be used in method to check "done" box on GUI
     public void changeComplete (Task task);
+
+    //get methods--------------------------------------------------------------------------------
+
+    // getName
+    // pre: none
+    // post:
+    // notes:
+    public abstract String getName();
+
+    // getProName
+    // pre: none
+    // post:
+    // notes:
+    public abstract String getProName();
+
+    // getNotes
+    // pre: none
+    // post:
+    // notes:
+    public abstract String getNotes();
+
+    // getComp
+    // pre: none
+    // post:
+    // notes:
+    public abstract boolean getComp();
+
+    // getDueDate
+    // pre: none
+    // post:
+    // notes:
+    public abstract Date getDueDate();
+
 }

@@ -194,4 +194,44 @@ public class Task implements TaskInterface{
         }
     }
 
+    // getName
+    // pre: none
+    // post:
+    // notes:
+    public String getName(){
+        return Tname;
+    }
+
+    // getProName
+    // pre: none
+    // post:
+    // notes:
+    public String getProName(){
+        return Pname;
+    }
+
+    // getNotes
+    // pre: none
+    // post:
+    // notes:
+    public String getNotes(){
+        return Notes;
+    }
+
+    // getComp
+    // pre: none
+    // post:
+    // notes:
+    public boolean getComp(){
+        return Completed;
+    }
+
+    // getDueDate
+    // pre: none
+    // post:
+    // notes:
+    public Date getDueDate(){
+        return dateDue;
+    }
+
 }

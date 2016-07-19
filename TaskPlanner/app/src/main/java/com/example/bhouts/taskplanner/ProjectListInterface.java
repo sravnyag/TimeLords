@@ -40,4 +40,10 @@ public interface ProjectListInterface {
     // notes:
     public abstract boolean hasTask(ProjectList proj, Task task);
 
+    // getProjName
+    // pre: none
+    // post: returns true if project has task in
+    // notes:
+    public abstract String getProjName();
+
 }

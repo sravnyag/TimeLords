@@ -1,4 +1,4 @@
-package com.example.jeffwag.sprint1;
+package com.example.bhouts.taskplanner;
 
 /**
  * Created by Jeffwag on 7/8/2016.
@@ -12,6 +12,8 @@ import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.example.bhouts.taskplanner.Task;
 
 
 public class DatabaseOperations extends SQLiteOpenHelper{
@@ -53,11 +55,11 @@ public class DatabaseOperations extends SQLiteOpenHelper{
     public void addTask(Task task) {
 
         ContentValues values = new ContentValues();
-        values.put(PROJECT, task.getParentClass());
+//        values.put(PROJECT, task.getParentClass());
         values.put(TASK_NAME, task.getName());
         values.put(PROJECT_NAME, task.getProName());
         values.put(NOTES, task.getNotes());
-        values.put(DUE_DATE, task.getDueDate());
+        values.put(DUE_DATE, task.getDueDate().toString());
         values.put(COMPLETED, task.getComp());
 
         SQLiteDatabase db = this.getWritableDatabase();
