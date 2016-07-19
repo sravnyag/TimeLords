@@ -115,6 +115,27 @@ public class HomeScreen extends AppCompatActivity {
             ExpandListChild ch = new ExpandListChild();
             ch.setName(Gbl.list_of_projects.get(i));
             chList.add(ch);
+
+//            //create button for the child
+//            Button projItem = (Button) ch;
+//
+//            OnClickListener projItemListener = new OnClickListener(){
+//                @Override
+//                public void onClick(View v) {
+//                    if (Gbl.hidden == Boolean.TRUE){
+//                        Gbl.fab_task.show();
+//                        Gbl.fab_project.show();
+//                        Gbl.hidden = Boolean.FALSE;
+//                    }else {
+//                        Gbl.fab_task.hide();
+//                        Gbl.fab_project.hide();
+//                        Gbl.hidden = Boolean.TRUE;
+//                    }
+//
+//                }
+//            };
+//            chList.setOnClickListener(projItemListener);
+
         }
 
         grup.setItems(chList);
