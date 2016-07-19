@@ -36,7 +36,7 @@ public class ditTask extends AppCompatActivity {
                 final EditText notes =  (EditText) findViewById(R.id.notes);
                 String notes1 = notes.getText().toString();
 
-                Task newTask = new Task(taskName1, projectName1, notes1);
+                Task newTask = new Task();
             }
         };
         task_enter.setOnClickListener(listen_task);

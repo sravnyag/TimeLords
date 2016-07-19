@@ -1,6 +1,7 @@
 package com.example.bhouts.taskplanner;
 import java.util.*;
-import java.lang.Object;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.xml.datatype.Duration;
 
@@ -10,19 +11,7 @@ import javax.xml.datatype.Duration;
  */
 public class Task implements TaskInterface{
 
-    // private inner Priority class
-    private class Priority {
-        String priority;
 
-        // constructor
-        private Priority (String input){
-            priority = input;
-            if (!priority.equalsIgnoreCase("high") | !priority.equalsIgnoreCase("med") |
-                    !priority.equalsIgnoreCase("low") | !priority.equalsIgnoreCase("none")){
-                System.err.println("Incorrect priority input");
-            }
-        }
-    }
 
 
     // private inner Tags class
@@ -43,7 +32,7 @@ public class Task implements TaskInterface{
     public String Pname;	     //associated poject
     public String Notes;         //task description
     public Boolean Completed;
-    public Priority priority;
+    public String priority;
     public Duration duration;
     public Tags tagList;
     public Date dateCreated;
@@ -87,83 +76,110 @@ public class Task implements TaskInterface{
 
     //constructor
     public Task(){
-        Tname = null;
+        Tname = "New Task";
         Pname = "Dump";
         Notes = null;
         Completed = false;
-        priority = null;
+        priority = "none";
         duration = null;
         tagList = null;
         dateDue = null;
+    }
+
+    // setName
+    // pre: none
+    // post: changes Tname field
+    public void setName(String userInput){
+        if (userInput != null && userInput != "" ){
+            Pattern p = Pattern.compile("\\s+");
+            Matcher m = p.matcher(userInput);
+            boolean b = m.matches();
+            if (!b) {
+                this.Tname = userInput;
+            }
+        }
     }
 
     // setNotes
     // pre: none
     // post: adds notes to initially empty notes attribute in a task obj
     // notes: edit so you can edit notes not just set notes
-    public void setNotes(Task task, String userInput){
-        task.Notes = userInput;
+    public void setNotes(String userInput){
+        this.Notes = userInput;
     }
 
     // setProject
     // pre: none
     // post: sets Project for a given task obj
     // notes: create check for existing project-if project DNE call create new project method
-    public void setProject(Task task, String userInput){
-        task.Pname = userInput;
+    //        if user sets to whitespace or null then go back to default project
+    public void setProject(String userInput){
+        if ( userInput != null | !userInput.equals("\\s+") ) {
+            this.Pname = userInput;
+        }
     }
 
     // setDueDate
     // pre: none
     // post: sets DueDate attribute for a task obj
-    public void setDueDate(Task task, Date userInput){
-        task.dateDue = userInput;
+    // notes: add check to makek sure only future dates can be set
+    public void setDueDate(Date userInput){
+        this.dateDue = userInput;
     }
 
     // setDuration
     // pre: none
     // post: sets Duration for a task obj
-    public void setDuration(Task task, Duration userInput){
-        task.duration = userInput;
+    public void setDuration(Duration userInput){
+        this.duration = userInput;
     }
 
     // setPriority
     // pre: none
     // post: sets priority for a task obj
-    public void setPriority(Task task, String userInput){
-        Priority p = new Priority (userInput);
-        task.priority = p;
+    public void setPriority(String userInput){
+        switch (userInput) {
+            case "high": this.priority = "high";
+                break;
+            case "med": this.priority = "med";
+                break;
+            case "low": this.priority = "low";
+                break;
+            case "none": this.priority = "none";
+                break;
+            default: System.err.println("Incorrect priority input");
+                break;
+        }
     }
 
     // editTags
     // pre: none
     // post: adds tags to task obj
     // notes: allow for deletion of tags
-    public void editTags(Task task, String userInput){
-
-        if ( userInput != null ){
-            splitTags(task.tagList, userInput);
-        }
+    public void editTags(String userInput){
+        if ( userInput != null ) splitTags(this.tagList, userInput);
         else System.err.println("User Input may not be null");
-
     }
 
     // isComplete
     // pre: none
     // post: returns true if task is complete, false otherwise
-    public boolean isComplete (Task task){
-        return task.Completed;
+    public boolean isComplete (){
+        return this.Completed;
     }
 
     // changeComplete
     // pre: none
     // post: if complete, sets to incomplete--if incomplete sets to complete
     // notes: to be used in method to check "done" box on GUI
-    public void changeComplete (Task task){
-        if (isComplete(task)){
-            task.Completed = false;
-        }
-        else task.Completed = true;
+    public void changeComplete (){
+        this.Completed = !this.isComplete();
     }
+
+
+    public String printPriority() {
+        return this.priority.toString();
+    }
+
 
 }

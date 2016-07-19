@@ -7,7 +7,7 @@ import android.support.design.widget.FloatingActionButton;
  */
 public class Gbl {
     public static ProjectList All = new ProjectList();
-    public static Task StartList = new Task("TO DO:", "", ""); //first task will simply show "TO DO:"
+    public static Task StartList = new Task(); //first task will simply show "TO DO:"
     public static Boolean hidden = Boolean.TRUE;
     public static FloatingActionButton fab_task;
     public static FloatingActionButton fab_project;

@@ -5,7 +5,7 @@ package com.example.bhouts.taskplanner;
  */
 public class Project {
     public Project(String projectName){
-        Task MyName = new Task(projectName,"",""); //cast String as Task so can add to te global projectlist "All"
+        Task MyName = new Task(); //cast String as Task so can add to te global projectlist "All"
         Gbl.All.TaskList.add(MyName);
     }
 }
