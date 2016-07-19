@@ -2,6 +2,7 @@ package com.example.bhouts.taskplanner;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -25,15 +26,24 @@ public class editProject extends  AppCompatActivity {
         final EditText projectName =  (EditText) findViewById(R.id.projectName);
         String projectName1 = projectName.getText().toString();
 
-        Project newProject = new Project(projectName1);
-//        newProject.setProjName(newProject, projectName1);
-        //add to all projects Databse
-        Gbl.allProjectsDatabase.add(newProject);
+        //create new project with this name if doesn't already exist
+        if (!Gbl.isProject(projectName1)){
+            Project newProject = new Project(projectName1);
+
+            //add to all projects Databse
+            Gbl.allProjectsDatabase.add(newProject);
+        }
 
         //go to homescreen
         Intent yeedawg = new Intent(this, HomeScreen.class);
         startActivity(yeedawg);
 
+    }
+
+    public String findProjName(){
+        String name;
+        name = "work bitch";
+        return name;
     }
 
     @Override
@@ -52,25 +62,8 @@ public class editProject extends  AppCompatActivity {
         list_of_tasks.setAdapter(myAdapter);
 
 
-//        project_enter = (Button) findViewById(R.id.project_enter);
-//
-//        //when task_done button pushed, creates new Task instance
-//        listen_project = new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v) {
-//
-//                final EditText projectName =  (EditText) findViewById(R.id.projectName);
-//                String projectName1 = projectName.getText().toString();
-//
-//                Project newProject = new Project();
-//                newProject.setProjName(newProject, projectName1);
-//                //add to all projects Databse
-//                Gbl.allProjectsDatabase.add(newProject);
-//
-//            }
-//        };
-//        project_enter.setOnClickListener(listen_project);
 
     }
+
 
 }

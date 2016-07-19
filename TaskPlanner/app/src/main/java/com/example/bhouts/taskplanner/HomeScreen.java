@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 
 public class HomeScreen extends AppCompatActivity {
@@ -41,6 +42,13 @@ public class HomeScreen extends AppCompatActivity {
         startActivity(intent1);
     }
 
+    //called when Dump button pushed..send to dump page
+    public void goDump(View view) {
+        Intent intent2 = new Intent(this, Dump.class);
+        startActivity(intent2);
+    }
+
+
     private ExpandListAdapter ExpAdapter;
     private ArrayList<ExpandListGroup> ExpListItems;
     private ExpandableListView ExpandList;
@@ -51,6 +59,8 @@ public class HomeScreen extends AppCompatActivity {
         setContentView(R.layout.activity_home_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //expandable project list
         ExpandList = (ExpandableListView) findViewById(R.id.ExpList);
         ExpListItems = SetStandardGroups();
         ExpAdapter = new ExpandListAdapter(HomeScreen.this, ExpListItems);
@@ -116,25 +126,15 @@ public class HomeScreen extends AppCompatActivity {
             ch.setName(Gbl.list_of_projects.get(i));
             chList.add(ch);
 
-//            //create button for the child
-//            Button projItem = (Button) ch;
-//
-//            OnClickListener projItemListener = new OnClickListener(){
-//                @Override
-//                public void onClick(View v) {
-//                    if (Gbl.hidden == Boolean.TRUE){
-//                        Gbl.fab_task.show();
-//                        Gbl.fab_project.show();
-//                        Gbl.hidden = Boolean.FALSE;
-//                    }else {
-//                        Gbl.fab_task.hide();
-//                        Gbl.fab_project.hide();
-//                        Gbl.hidden = Boolean.TRUE;
-//                    }
-//
-//                }
-//            };
-//            chList.setOnClickListener(projItemListener);
+            //listview on child click listener
+            ExpandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+                @Override
+                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                    newProject(ExpandList);
+                    return false;
+                }
+
+            });
 
         }
 
