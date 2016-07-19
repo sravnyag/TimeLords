@@ -11,6 +11,12 @@ import javax.xml.datatype.Duration;
  */
 public interface TaskInterface {
 
+    // setName - this
+    // pre: none
+    // post: adds name to initially empty Tname attribute in a task obj
+    // notes:
+    public void setName(String userInput);
+
     // setName
     // pre: none
     // post: adds name to initially empty Tname attribute in a task obj
@@ -29,6 +35,11 @@ public interface TaskInterface {
     // notes: create check for existing project-if project DNE call create new project method
     public void setProject(Task task, String userInput);
 
+    // setDueDate - this
+    // pre: none
+    // post: sets DueDate attribute for a task obj
+    public void setDueDate(Date userInput);
+
     // setDueDate
     // pre: none
     // post: sets DueDate attribute for a task obj
@@ -38,6 +49,11 @@ public interface TaskInterface {
     // pre: none
     // post: sets Duration for a task obj
     public void setDuration(Task task, Duration userInput);
+
+    // setPriority - this
+    // pre: none
+    // post: sets priority for a task obj
+    public void setPriority(String userInput);
 
     // setPriority
     // pre: none
