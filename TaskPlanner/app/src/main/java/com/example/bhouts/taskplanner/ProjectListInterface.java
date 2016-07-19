@@ -34,5 +34,10 @@ public interface ProjectListInterface {
     // notes: to be used in method to check "done" box on GUI
     public abstract void changeProjComplete(ProjectList proj);
 
+    // hasTask
+    // pre: none
+    // post: returns true if project has task in
+    // notes:
+    public abstract boolean hasTask(ProjectList proj, Task task);
 
 }

@@ -1,5 +1,6 @@
 package com.example.bhouts.taskplanner;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,8 +21,61 @@ import java.text.ParseException;
 
 public class ditTask extends AppCompatActivity {
 
-    View.OnClickListener listen_task = null;
-    Button task_enter;
+//    View.OnClickListener listen_task = null;
+//    Button task_enter;
+
+    //when ENTER button clicked, go to homescreen
+    public void goHSfromTask(View view) {
+        //get user input
+        final EditText taskName =  (EditText) findViewById(R.id.taskName);
+        String taskName1 = taskName.getText().toString();
+
+
+        final EditText projectName =  (EditText) findViewById(R.id.projectAttName);
+        String projectName1 = projectName.getText().toString();
+
+
+        final EditText notes =  (EditText) findViewById(R.id.notes);
+        String notes1 = notes.getText().toString();
+
+
+
+        //create new Task and add attributes from user input
+        Task newTask = new Task();
+        if (taskName1.equals(null)){
+            newTask.setName(newTask, "no name");
+        }else{
+            newTask.setName(newTask, taskName1);
+        }
+        newTask.setProject(newTask, projectName1);
+        newTask.setNotes(newTask, notes1);
+        Intent ilikeboobies = new Intent(this, HomeScreen.class);
+        startActivity(ilikeboobies);
+
+        // pottentially need to get rid of null pointer error
+//        newTask.setName(((taskName.equals(null)) ? "no_name" :
+//                taskName1));
+
+        //set DueDate;
+        try {
+            DateFormat format =
+                    new SimpleDateFormat("MM/dd/yyyy");
+            String DueDateStr =
+                    ((EditText) findViewById(R.id.textDueDate))
+                            .getText().toString();
+            newTask.setDueDate(format.parse(DueDateStr));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        //set priorit level
+        String priorityStr =
+                ((EditText) findViewById(R.id.notes))
+                        .getText().toString();
+        newTask.setPriority(((priorityStr.equals(null)) ?
+                "no_name" :
+                priorityStr));
+
+    }
 
     private Spinner priority;
     private Spinner tag;
@@ -44,6 +98,15 @@ public class ditTask extends AppCompatActivity {
         tag_list.add("tag 1");
         tag_list.add("tag 2");
         tag_list.add("tag 3");
+        tag_list.add("tag 1");
+        tag_list.add("tag 2");
+        tag_list.add("tag 3");
+        tag_list.add("tag 1");
+        tag_list.add("tag 2");
+        tag_list.add("tag 3");
+        tag_list.add("tag 1");
+        tag_list.add("tag 2");
+        tag_list.add("tag 3");
         ArrayAdapter<String> dataAdapter2 =
                 new ArrayAdapter<String>(this, android.R.layout
                         .simple_spinner_item, tag_list);
@@ -59,56 +122,11 @@ public class ditTask extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        task_enter = (Button) findViewById(R.id.task_enter);
 
         // set example spinners
         Spinner priority = (Spinner) findViewById(R.id.priority_choice);
         Spinner tag = (Spinner) findViewById(R.id.tag_choice);
         populatePrioritySpinner(priority, tag); // run test list
 
-        //when task_done button pushed, creates new Task instance
-        listen_task = new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                final EditText taskName =
-                        (EditText) findViewById(R.id.taskName);
-                String taskName1 = taskName.getText().toString();
-
-                final EditText projectName =
-                        (EditText) findViewById(R.id.projectAttName);
-                String projectName1 =
-                        projectName.getText().toString();
-
-                final EditText notes =
-                        (EditText) findViewById(R.id.notes);
-                String notes1 = notes.getText().toString();
-
-                Task newTask = new Task();
-
-                // // creating new Task and setting its attributes
-                //setName
-                newTask.setName(((taskName.equals(null)) ? "no_name" :
-                        taskName1));
-                //set DueDate;
-                try {
-                    DateFormat format =
-                            new SimpleDateFormat("MM/dd/yyyy");
-                    String DueDateStr =
-                            ((EditText) findViewById(R.id.textDueDate))
-                                    .getText().toString();
-                    newTask.setDueDate(format.parse(DueDateStr));
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-                //set priorit level
-                String priorityStr =
-                        ((EditText) findViewById(R.id.notes))
-                                .getText().toString();
-                newTask.setPriority(((priorityStr.equals(null)) ?
-                        "no_name" :
-                        priorityStr));
-            }
-        };
-        task_enter.setOnClickListener(listen_task);
     }
 }
