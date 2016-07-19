@@ -123,7 +123,8 @@ public class HomeScreen extends AppCompatActivity {
 
         for (int i=0;i<Gbl.list_of_projects.size();i++){
             ExpandListChild ch = new ExpandListChild();
-            ch.setName(Gbl.list_of_projects.get(i));
+            Gbl.passProjName = Gbl.list_of_projects.get(i);
+            ch.setName(Gbl.passProjName);
             chList.add(ch);
 
             //listview on child click listener

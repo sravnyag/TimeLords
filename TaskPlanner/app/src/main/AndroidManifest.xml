@@ -29,7 +29,7 @@
         </activity>
         <activity
             android:name=".editProject"
-            android:label="workBitch"
+            android:label="@string/title_activity_edit_project"
             android:parentActivityName=".HomeScreen"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

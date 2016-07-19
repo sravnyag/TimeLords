@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class editProject extends  AppCompatActivity {
 
@@ -40,11 +41,10 @@ public class editProject extends  AppCompatActivity {
 
     }
 
-    public String findProjName(){
-        String name;
-        name = "work bitch";
-        return name;
+    public String getProjName(){
+        return Gbl.passProjName;
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,7 @@ public class editProject extends  AppCompatActivity {
         setContentView(R.layout.activity_edit_project);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(getProjName());
 
         String[] projectTasks = {"task0", "task1", "task2", "task3"};
 
