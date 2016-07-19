@@ -63,21 +63,6 @@
         android:layout_alignParentStart="true"
         android:hint="@string/due_hint"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ENTER"
-        android:id="@+id/task_enter"
-        android:layout_alignParentBottom="true"
-        android:onClick="goHSfromTask"/>
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -120,6 +105,14 @@
         android:layout_alignBottom="@+id/tag_choice"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ENTER"
+        android:id="@+id/task_enter"
+        android:layout_alignParentBottom="true"
+        android:onClick="goHSfromTask"/>
 
 
 </RelativeLayout>

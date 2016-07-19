@@ -46,11 +46,9 @@ public class Gbl {
             Gbl.allProjectsDatabase.get(pos).addTask(Gbl.allProjectsDatabase.get(pos), task);
         }else{
             //create new project
-            Project newProject = new Project();
-            newProject.setProjName(newProject, ProjName);allProjectsDatabase.add(newProject);
+            Project newProject = new Project(ProjName);
             //add to all projects Databse
             Gbl.allProjectsDatabase.add(newProject);
-            //add to list of all ProjectNames
 
         }
     }

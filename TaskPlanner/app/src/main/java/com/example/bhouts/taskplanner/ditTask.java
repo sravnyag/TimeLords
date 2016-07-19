@@ -39,7 +39,6 @@ public class ditTask extends AppCompatActivity {
         String notes1 = notes.getText().toString();
 
 
-
         //create new Task and add attributes from user input
         Task newTask = new Task();
         if (taskName1.equals(null)){
@@ -49,6 +48,9 @@ public class ditTask extends AppCompatActivity {
         }
         newTask.setProject(newTask, projectName1);
         newTask.setNotes(newTask, notes1);
+
+        Gbl.addTaskToProj(newTask, projectName1);
+
         Intent ilikeboobies = new Intent(this, HomeScreen.class);
         startActivity(ilikeboobies);
 

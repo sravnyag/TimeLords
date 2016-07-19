@@ -25,14 +25,15 @@ public class editProject extends  AppCompatActivity {
         final EditText projectName =  (EditText) findViewById(R.id.projectName);
         String projectName1 = projectName.getText().toString();
 
-        Project newProject = new Project();
-        newProject.setProjName(newProject, projectName1);
+        Project newProject = new Project(projectName1);
+//        newProject.setProjName(newProject, projectName1);
         //add to all projects Databse
         Gbl.allProjectsDatabase.add(newProject);
 
         //go to homescreen
         Intent yeedawg = new Intent(this, HomeScreen.class);
         startActivity(yeedawg);
+
     }
 
     @Override
