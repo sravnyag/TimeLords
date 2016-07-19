@@ -9,7 +9,9 @@ import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 import android.widget.Toast;
+import android.util.Log;
 
 // need to import DatabaseOperations
 
@@ -38,6 +40,7 @@ public class DatabaseClass extends SQLiteOpenHelper {
 
 
         dB.execSQL(CREATE_TABLE_CLASS);
+        Log.d("Database class", "One row inserted");
     }
 
     @Override
@@ -57,6 +60,7 @@ public class DatabaseClass extends SQLiteOpenHelper {
 
         db.insert(TABLE, null, values);
         db.close();
+        Log.d("addProject database", "values stored in database");
     }
 
 
