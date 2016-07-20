@@ -1,4 +1,4 @@
-package com.example.jeffwag.sprint1;
+package com.example.bhouts.taskplanner;
 
 /**
  * Created by Jeffwag on 7/8/2016.
@@ -13,11 +13,13 @@ import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.bhouts.taskplanner.Task;
+
 
 public class DatabaseOperations extends SQLiteOpenHelper{
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "assignmentDB.db";
-    private static final String TABLE = "assignments";
+    private static final String DATABASE_NAME = "taskDB.db";
+    private static final String TABLE = "tasks";
     public static final String ID = "id";
     public static final String PROJECT = "project";
     public static final String TASK_NAME = "taskname";
@@ -53,19 +55,19 @@ public class DatabaseOperations extends SQLiteOpenHelper{
     public void addTask(Task task) {
 
         ContentValues values = new ContentValues();
-        values.put(PROJECT, task.getParentClass());
+//        values.put(PROJECT, task.getParentClass());
         values.put(TASK_NAME, task.getName());
         values.put(PROJECT_NAME, task.getProName());
         values.put(NOTES, task.getNotes());
+        values.put(DUE_DATE, task.getDueDate().toString());
         values.put(COMPLETED, task.getComp());
-        values.put(DUE_DATE, task.getDueDate());
-        
 
         SQLiteDatabase db = this.getWritableDatabase();
 
         db.insert(TABLE, null, values);
         db.close();
     }
+
     public Cursor getTasks(String Project) {
         SQLiteDatabase db = this.getReadableDatabase();
         String selectQuery = "SELECT * FROM " + TABLE + " WHERE " + PROJECT + " = '" + Project + "'";
@@ -73,8 +75,8 @@ public class DatabaseOperations extends SQLiteOpenHelper{
         cursor.moveToFirst();
         return cursor;
     }
-    
-    public void changeName(String name, String newname) {
+
+    public void changeTaskName(String name, String newname) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(TASK_NAME, newname);
@@ -99,7 +101,7 @@ public class DatabaseOperations extends SQLiteOpenHelper{
     }
 
 
-    public void changeClass(String name, String newname) {
+    public void changeProject(String name, String newname) {
         String query = "Select * FROM " + TABLE + " WHERE " + PROJECT + " =  \"" + name + "\"";
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);

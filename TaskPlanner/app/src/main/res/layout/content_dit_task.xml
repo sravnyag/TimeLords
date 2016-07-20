@@ -57,18 +57,62 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/textDueDate"
         android:layout_below="@+id/notes"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:hint="@string/due_hint"/>
+
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/priority_choice"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/textDueDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/taskName"
+        android:layout_alignEnd="@+id/taskName" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/tag_choice"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/priority_choice"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/priority_choice"
+        android:layout_alignEnd="@+id/priority_choice" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/priority_level_text"
+        android:id="@+id/priority_level_textView"
+        android:layout_alignBottom="@+id/priority_choice"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/tag_text"
+        android:id="@+id/tag_textView"
+        android:layout_alignBottom="@+id/tag_choice"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ENTER"
         android:id="@+id/task_enter"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:onClick="goHSfromTask"/>
 
 
 </RelativeLayout>

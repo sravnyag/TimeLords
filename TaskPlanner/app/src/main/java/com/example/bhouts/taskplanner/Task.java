@@ -9,11 +9,9 @@ import javax.xml.datatype.Duration;
  * Task.java
  * Created by bhouts on 7/10/2016.
  */
+
+
 public class Task implements TaskInterface{
-
-
-
-
     // private inner Tags class
     private class Tags {
         String tagString;
@@ -100,6 +98,7 @@ public class Task implements TaskInterface{
         }
     }
 
+
     // setNotes
     // pre: none
     // post: adds notes to initially empty notes attribute in a task obj
@@ -119,10 +118,9 @@ public class Task implements TaskInterface{
         }
     }
 
-    // setDueDate
+    // setDueDate - this
     // pre: none
     // post: sets DueDate attribute for a task obj
-    // notes: add check to makek sure only future dates can be set
     public void setDueDate(Date userInput){
         this.dateDue = userInput;
     }
@@ -174,6 +172,47 @@ public class Task implements TaskInterface{
     // notes: to be used in method to check "done" box on GUI
     public void changeComplete (){
         this.Completed = !this.isComplete();
+
+    }
+
+    // getName
+    // pre: none
+    // post:
+    // notes:
+    public String getName(){
+        return this.Tname;
+    }
+
+    // getProName
+    // pre: none
+    // post:
+    // notes:
+    public String getProName(){
+        return this.Pname;
+    }
+
+    // getNotes
+    // pre: none
+    // post:
+    // notes:
+    public String getNotes(){
+        return this.Notes;
+    }
+
+    // getComp
+    // pre: none
+    // post:
+    // notes:
+    public boolean getComp(){
+        return this.Completed;
+    }
+
+    // getDueDate
+    // pre: none
+    // post:
+    // notes:
+    public Date getDueDate(){
+        return this.dateDue;
     }
 
 

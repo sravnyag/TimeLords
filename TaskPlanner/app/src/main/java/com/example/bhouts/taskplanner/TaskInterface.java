@@ -10,6 +10,7 @@ import javax.xml.datatype.Duration;
  * Created by Julia on 7/15/2016.
  */
 public interface TaskInterface {
+
     // setName
     // pre: none
     // post: changes Tname field
@@ -37,7 +38,7 @@ public interface TaskInterface {
     // post: sets Duration for a task obj
     public void setDuration(Duration userInput);
 
-    // setPriority
+    // setPriority - this
     // pre: none
     // post: sets priority for a task obj
     public void setPriority(String userInput);
@@ -53,9 +54,44 @@ public interface TaskInterface {
     // post: returns true if task is complete, false otherwise
     public boolean isComplete ();
 
+
     // changeComplete
     // pre: none
     // post: if complete, sets to incomplete--if incomplete sets to complete
     // notes: to be used in method to check "done" box on GUI
     public void changeComplete ();
+
+
+    //get methods--------------------------------------------------------------------------------
+
+    // getName
+    // pre: none
+    // post:
+    // notes:
+    public abstract String getName();
+
+    // getProName
+    // pre: none
+    // post:
+    // notes:
+    public abstract String getProName();
+
+    // getNotes
+    // pre: none
+    // post:
+    // notes:
+    public abstract String getNotes();
+
+    // getComp
+    // pre: none
+    // post:
+    // notes:
+    public abstract boolean getComp();
+
+    // getDueDate
+    // pre: none
+    // post:
+    // notes:
+    public abstract Date getDueDate();
+
 }
