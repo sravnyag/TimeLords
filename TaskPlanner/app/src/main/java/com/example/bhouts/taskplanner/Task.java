@@ -3,7 +3,7 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.xml.datatype.Duration;
+//import javax.xml.datatype.Duration;
 
 /**
  * Task.java
@@ -31,7 +31,8 @@ public class Task implements TaskInterface{
     public String Notes;         //task description
     public Boolean Completed;
     public String priority;
-    public Duration duration;
+    //public Duration duration;
+    public int duration;
     public Tags tagList;
     public Date dateCreated;
     public Date dateDue;
@@ -79,7 +80,7 @@ public class Task implements TaskInterface{
         Notes = null;
         Completed = false;
         priority = "none";
-        duration = null;
+        duration = 0;
         tagList = null;
         dateDue = null;
     }
@@ -128,7 +129,7 @@ public class Task implements TaskInterface{
     // setDuration
     // pre: none
     // post: sets Duration for a task obj
-    public void setDuration(Duration userInput){
+    public void setDuration(int userInput){
         this.duration = userInput;
     }
 

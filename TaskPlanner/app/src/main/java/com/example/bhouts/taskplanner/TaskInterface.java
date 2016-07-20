@@ -36,7 +36,7 @@ public interface TaskInterface {
     // setDuration
     // pre: none
     // post: sets Duration for a task obj
-    public void setDuration(Duration userInput);
+    public void setDuration(int userInput);
 
     // setPriority - this
     // pre: none

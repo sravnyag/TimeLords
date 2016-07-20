@@ -18,6 +18,7 @@ import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
+import android.widget.NumberPicker;
 
 public class ditTask extends AppCompatActivity {
 
@@ -123,13 +124,25 @@ public class ditTask extends AppCompatActivity {
         setContentView(R.layout.activity_dit_task);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-                final EditText notes =  (EditText) findViewById(R.id.notes);
-                String notes1 = notes.getText().toString();
+        final EditText notes=(EditText)findViewById(R.id.notes);
+        String notes1 = notes.getText().toString();
+        Task newTask = new Task();
 
-                Task newTask = new Task();
-            }
-        };
-        task_enter.setOnClickListener(listen_task);
+        NumberPicker npDurationD = (NumberPicker) findViewById(R.id
+                .pickerDurationD);
+        npDurationD.setMinValue(0);
+        npDurationD.setMaxValue(30);
+        NumberPicker npDurationH = (NumberPicker) findViewById(R.id
+                .pickerDurationH);
+        npDurationH.setMinValue(0);
+        npDurationH.setMaxValue(24);
+        NumberPicker npDurationM = (NumberPicker) findViewById(R.id
+                .pickerDurationM);
+        npDurationM.setMinValue(0);
+        npDurationM.setMaxValue(59);
 
     }
+        //};
+        //task_enter.setOnClickListener(listen_task);
+    //}
 }
