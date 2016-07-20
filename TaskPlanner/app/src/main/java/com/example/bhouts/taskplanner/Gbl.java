@@ -12,7 +12,7 @@ public class Gbl {
     public static FloatingActionButton fab_task;
     public static FloatingActionButton fab_project;
     public static FloatingActionButton fab_show;
-    public static String passProjName;
+    public static String passProjName = "New Project";
 
 
     //Projectlist with all projects as tasklist

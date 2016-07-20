@@ -75,6 +75,7 @@ public class HomeScreen extends AppCompatActivity {
         listener1 = new OnClickListener(){
             @Override
             public void onClick(View v) {
+                Gbl.passProjName = "New Project";
                 if (Gbl.hidden == Boolean.TRUE){
                     Gbl.fab_task.show();
                     Gbl.fab_project.show();
@@ -122,15 +123,16 @@ public class HomeScreen extends AppCompatActivity {
         grup.setName("Projects");
 
         for (int i=0;i<Gbl.list_of_projects.size();i++){
-            ExpandListChild ch = new ExpandListChild();
-            Gbl.passProjName = Gbl.list_of_projects.get(i);
-            ch.setName(Gbl.passProjName);
+            final ExpandListChild ch = new ExpandListChild();
+            String name = Gbl.list_of_projects.get(i);
+            ch.setName(name);
             chList.add(ch);
 
             //listview on child click listener
             ExpandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
                 @Override
                 public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                    Gbl.passProjName = Gbl.list_of_projects.get(childPosition);
                     newProject(ExpandList);
                     return false;
                 }

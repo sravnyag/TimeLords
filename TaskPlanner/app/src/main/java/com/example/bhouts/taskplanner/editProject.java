@@ -16,6 +16,9 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class editProject extends  AppCompatActivity {
 
 //    View.OnClickListener listen_project = null;
@@ -53,8 +56,22 @@ public class editProject extends  AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(getProjName());
+        ArrayList<String> projectTasks = new ArrayList<String>();
+        int i = Gbl.getPos(Gbl.passProjName);
+        int size = Gbl.allProjectsDatabase.get(i).TaskList.size();
+        if (Gbl.passProjName.equals("New Project")){
+            projectTasks.add("You should add some tasks!");
+        }else{
+            for (int x=0; x<size; x++){
+                projectTasks.add(Gbl.allProjectsDatabase.get(i).TaskList.get(x).getName());
+            }
+        }
+        String [] wtf = new String[size];
+        for (int y=0; y<size; y++){
+            wtf[0] = ;
+        }
 
-        String[] projectTasks = {"task0", "task1", "task2", "task3"};
+        //String[] projectTasks = {"task0", "task1", "task2", "task3"};
 
         ArrayAdapter<String> myAdapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, projectTasks);
 
