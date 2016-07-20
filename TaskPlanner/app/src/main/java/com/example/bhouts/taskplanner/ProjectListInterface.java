@@ -46,4 +46,16 @@ public interface ProjectListInterface {
     // notes:
     public abstract String getProjName();
 
+    // getTaskList
+    // pre: none
+    // post:
+    // notes:
+    public abstract String[] getTaskList();
+
+    // getTaskListSize
+    // pre: none
+    // post:
+    // notes:
+    public abstract int getTaskListSize();
+
 }

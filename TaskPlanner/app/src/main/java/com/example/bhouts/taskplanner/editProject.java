@@ -15,7 +15,6 @@ import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,27 +52,30 @@ public class editProject extends  AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_project);
+        //set page name
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(getProjName());
-        ArrayList<String> projectTasks = new ArrayList<String>();
+
+        //get string array of tasks
+        //get project poss
         int i = Gbl.getPos(Gbl.passProjName);
-        int size = Gbl.allProjectsDatabase.get(i).TaskList.size();
-        if (Gbl.passProjName.equals("New Project")){
-            projectTasks.add("You should add some tasks!");
+        //find size of project's task list
+        int size;
+        if (!Gbl.passProjName.equals("New Project")){
+            size = Gbl.allProjectsDatabase.get(i).getTaskListSize();
         }else{
-            for (int x=0; x<size; x++){
-                projectTasks.add(Gbl.allProjectsDatabase.get(i).TaskList.get(x).getName());
-            }
+            size = 1;
         }
-        String [] wtf = new String[size];
-        for (int y=0; y<size; y++){
-            wtf[0] = ;
+        String[] wtf = new String[size];
+        if (!Gbl.passProjName.equals("New Project")){
+            wtf = Gbl.allProjectsDatabase.get(i).getTaskList();
+        }else{
+            wtf[0] = "";
         }
 
-        //String[] projectTasks = {"task0", "task1", "task2", "task3"};
 
-        ArrayAdapter<String> myAdapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, projectTasks);
+        ArrayAdapter<String> myAdapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, wtf);
 
         ListView list_of_tasks=(ListView) findViewById(R.id.project_task_list);
 

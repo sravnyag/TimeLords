@@ -37,7 +37,7 @@ public class Gbl {
                 return i;
             }
         }
-        return (-1); //would be an error
+        return (0); //would be an error
     }
 
     //check to see if task's project already exists, if not create new project then add
