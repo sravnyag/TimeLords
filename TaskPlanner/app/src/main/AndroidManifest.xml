@@ -37,8 +37,8 @@
                 android:value="com.example.bhouts.taskplanner.HomeScreen" />
         </activity>
         <activity
-            android:name=".show_project"
-            android:label="@string/title_activity_show_project"
+            android:name=".Dump"
+            android:label="@string/title_activity_dump"
             android:parentActivityName=".HomeScreen"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

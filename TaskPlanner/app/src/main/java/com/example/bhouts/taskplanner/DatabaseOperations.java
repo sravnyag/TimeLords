@@ -12,6 +12,7 @@ import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.example.bhouts.taskplanner.Task;
 
@@ -30,6 +31,7 @@ public class DatabaseOperations extends SQLiteOpenHelper{
 
     public DatabaseOperations(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DATABASE_NAME, factory, DATABASE_VERSION);
+        Log.d("Database operations", "One row inserted");
     }
 
     @Override
@@ -66,6 +68,7 @@ public class DatabaseOperations extends SQLiteOpenHelper{
 
         db.insert(TABLE, null, values);
         db.close();
+        Log.d("addTask database method", "values stored in database");
     }
 
     public Cursor getTasks(String Project) {
