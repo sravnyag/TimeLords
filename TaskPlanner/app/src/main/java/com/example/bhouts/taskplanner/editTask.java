@@ -19,7 +19,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 
-public class ditTask extends AppCompatActivity {
+public class editTask extends AppCompatActivity {
 
 //    View.OnClickListener listen_task = null;
 //    Button task_enter;
