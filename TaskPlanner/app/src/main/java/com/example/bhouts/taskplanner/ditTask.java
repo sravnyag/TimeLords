@@ -26,33 +26,42 @@ public class ditTask extends AppCompatActivity {
 
     //when ENTER button clicked, go to homescreen
     public void goHSfromTask(View view) {
-        //get user input
+        //get user input:
+        //get the name of task
         final EditText taskName =  (EditText) findViewById(R.id.taskName);
         String taskName1 = taskName.getText().toString();
 
-
+        //get the name of the task's project
         final EditText projectName =  (EditText) findViewById(R.id.projectAttName);
         String projectName1 = projectName.getText().toString();
 
-
+        //get the task's notes
         final EditText notes =  (EditText) findViewById(R.id.notes);
         String notes1 = notes.getText().toString();
 
-
         //create new Task and add attributes from user input
         Task newTask = new Task();
+        //if user didnot input a name set the name to "no name"
         if (taskName1.equals(null)){
             newTask.setName(newTask, "no name");
+        //else set the name to the user's input
         }else{
             newTask.setName(newTask, taskName1);
         }
+        //set te tasks project name
         newTask.setProject(newTask, projectName1);
+        //set the task's notes
         newTask.setNotes(newTask, notes1);
 
+        //add task to project
+        //use gbl method adTaskToProject- checks to see if projects exists, if not creates new project
         Gbl.addTaskToProj(newTask, projectName1);
 
-        Intent ilikeboobies = new Intent(this, HomeScreen.class);
-        startActivity(ilikeboobies);
+        //hide fab buttons on homescreen
+        Gbl.hide_fab();
+
+        Intent goHome = new Intent(this, HomeScreen.class);
+        startActivity(goHome);
 
         // pottentially need to get rid of null pointer error
 //        newTask.setName(((taskName.equals(null)) ? "no_name" :

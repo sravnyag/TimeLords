@@ -33,22 +33,24 @@ public class HomeScreen extends AppCompatActivity {
 
     /*called when fab button pushed*/
     public void newTask(View view) {
-        Intent intent = new Intent(this, ditTask.class);
-        startActivity(intent);
+        Intent go_ditTask = new Intent(this, ditTask.class);
+        startActivity(go_ditTask);
     }
 
-    public void newProject(View view) {
-        Intent intent1 = new Intent(this, editProject.class);
-        startActivity(intent1);
+    //called when fab button pushed/ when project from collapsible list is pushed
+    public void newProject(View view){
+        Intent go_editProject = new Intent(this, editProject.class);
+        startActivity(go_editProject);
     }
 
     //called when Dump button pushed..send to dump page
     public void goDump(View view) {
-        Intent intent2 = new Intent(this, Dump.class);
-        startActivity(intent2);
+        Intent go_dump = new Intent(this, Dump.class);
+        startActivity(go_dump);
     }
 
 
+    //variables for collapsible project list
     private ExpandListAdapter ExpAdapter;
     private ArrayList<ExpandListGroup> ExpListItems;
     private ExpandableListView ExpandList;
@@ -66,10 +68,11 @@ public class HomeScreen extends AppCompatActivity {
         ExpAdapter = new ExpandListAdapter(HomeScreen.this, ExpListItems);
         ExpandList.setAdapter(ExpAdapter);
 
-
+        //declare fab buttons
         Gbl.fab_task = (FloatingActionButton) findViewById(R.id.fab_task);
         Gbl.fab_project = (FloatingActionButton) findViewById(R.id.fab_project);
         Gbl.fab_show = (FloatingActionButton) findViewById(R.id.fab_show);
+        //initially hide these two fabs
         Gbl.fab_task.hide();
         Gbl.fab_project.hide();
         listener1 = new OnClickListener(){
@@ -113,6 +116,7 @@ public class HomeScreen extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //collapsible list of projects
     public ArrayList<ExpandListGroup> SetStandardGroups() {
 
         ArrayList<ExpandListGroup> grList = new ArrayList<ExpandListGroup>();

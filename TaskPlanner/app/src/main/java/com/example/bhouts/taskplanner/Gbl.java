@@ -8,10 +8,22 @@ import java.util.ArrayList;
  * Created by bhouts on 7/10/2016.
  */
 public class Gbl {
+    //variable to keep track of when project and task fabs should be hidden
     public static Boolean hidden = Boolean.TRUE;
+
+    //fab buttons
     public static FloatingActionButton fab_task;
     public static FloatingActionButton fab_project;
     public static FloatingActionButton fab_show;
+
+    //
+    public static void hide_fab(){
+        Gbl.fab_task.hide();
+        Gbl.fab_project.hide();
+        Gbl.hidden = Boolean.TRUE;
+    }
+
+    //gbl varibale to pass the name of a project to so can display on editProjects header
     public static String passProjName = "New Project";
 
 
