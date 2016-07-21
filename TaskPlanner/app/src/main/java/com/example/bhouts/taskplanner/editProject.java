@@ -15,14 +15,11 @@ import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class editProject extends AppCompatActivity {
 
-//    View.OnClickListener listen_project = null;
-//    Button project_enter;
 
 
     //called when user clicks "ENTER" button
@@ -34,13 +31,13 @@ public class editProject extends AppCompatActivity {
         if (!Gbl.isProject(projectName1)){
             Project newProject = new Project(projectName1);
 
-            //add to all projects Databse
+            //add to all projects Database
             Gbl.allProjectsDatabase.add(newProject);
         }
 
         //go to homescreen
-        Intent yeedawg = new Intent(this, HomeScreen.class);
-        startActivity(yeedawg);
+        Intent goHome = new Intent(this, HomeScreen.class);
+        startActivity(goHome);
 
     }
 
@@ -53,27 +50,36 @@ public class editProject extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_project);
+        //set page name
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(getProjName());
-        ArrayList<String> projectTasks = new ArrayList<String>();
+
+        //get string array of tasks
+        //get project position
         int i = Gbl.getPos(Gbl.passProjName);
-        int size = Gbl.allProjectsDatabase.get(i).TaskList.size();
-        if (Gbl.passProjName.equals("New Project")){
-            projectTasks.add("You should add some tasks!");
+        //find size of project's task list
+        int size;
+        //check to see if the click to get to project page was from the project list or from the new project fab
+        if (!Gbl.passProjName.equals("New Project")){
+            size = Gbl.allProjectsDatabase.get(i).getTaskListSize();
         }else{
-            for (int x=0; x<size; x++){
-                projectTasks.add(Gbl.allProjectsDatabase.get(i).TaskList.get(x).getName());
-            }
+            size = 1;
         }
+
         String [] wtf = new String[size];
-        for (int y=0; y<size; y++){
+        for (int y=0; y<size; y++) {
             wtf[0] = "";
         }
+        String[] taskList = new String[size];
+        if (!Gbl.passProjName.equals("New Project")){
+            taskList = Gbl.allProjectsDatabase.get(i).getTaskList();
+        }else{
+            taskList[0] = "";
+        }
 
-        //String[] projectTasks = {"task0", "task1", "task2", "task3"};
-
-        ArrayAdapter<String> myAdapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, projectTasks);
+        //set the list of tasks for the project page
+        ArrayAdapter<String> myAdapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, taskList);
 
         ListView list_of_tasks=(ListView) findViewById(R.id.project_task_list);
 

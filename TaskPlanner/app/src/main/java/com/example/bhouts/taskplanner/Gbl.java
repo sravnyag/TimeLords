@@ -9,13 +9,16 @@ import java.util.ArrayList;
  */
 public class Gbl {
 
-    public static ProjectList All = new ProjectList();
-    public static Task StartList = new Task(); //first task will simply show "TO DO:"
-
+    //variable to keep track of when project and task fabs should be hidden
     public static Boolean hidden = Boolean.TRUE;
+
+    //fab buttons
     public static FloatingActionButton fab_task;
     public static FloatingActionButton fab_project;
     public static FloatingActionButton fab_show;
+
+
+    //gbl varibale to pass the name of a project to so can display on editProjects header
     public static String passProjName = "New Project";
 
 
@@ -41,7 +44,7 @@ public class Gbl {
                 return i;
             }
         }
-        return (-1); //would be an error
+        return (0); //would be an error
     }
 
     //check to see if task's project already exists, if not create new project then add

@@ -61,4 +61,25 @@ public class ProjectList implements ProjectListInterface{
         return ProjName;
     }
 
+    // getTaskList
+    // pre: none
+    // post:
+    // notes:
+    public String[] getTaskList(){
+        int size = TaskList.size();
+        String[] yo = new String[size];
+        for (int i = 0; i < size; i++) {
+            yo[i] = TaskList.get(i).getName();
+        }
+        return yo;
+    }
+
+    // getTaskListSize
+    // pre: none
+    // post:
+    // notes:
+    public int getTaskListSize(){
+        return TaskList.size();
+    }
+
 }
