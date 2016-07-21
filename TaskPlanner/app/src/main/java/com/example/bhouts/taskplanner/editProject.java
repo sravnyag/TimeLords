@@ -66,11 +66,6 @@ public class editProject extends AppCompatActivity {
         }else{
             size = 1;
         }
-
-        String [] wtf = new String[size];
-        for (int y=0; y<size; y++) {
-            wtf[0] = "";
-        }
         String[] taskList = new String[size];
         if (!Gbl.passProjName.equals("New Project")){
             taskList = Gbl.allProjectsDatabase.get(i).getTaskList();
