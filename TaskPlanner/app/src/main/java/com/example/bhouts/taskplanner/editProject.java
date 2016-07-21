@@ -64,14 +64,13 @@ public class editProject extends AppCompatActivity {
         if (!Gbl.passProjName.equals("New Project")){
             size = Gbl.allProjectsDatabase.get(i).getTaskListSize();
         }else{
-            size = 1;
+            size = 0;
         }
         String[] taskList = new String[size];
-        if (!Gbl.passProjName.equals("New Project")){
+        if (!Gbl.passProjName.equals("New Project")) {
             taskList = Gbl.allProjectsDatabase.get(i).getTaskList();
-        }else{
-            taskList[0] = "";
         }
+
 
         //set the list of tasks for the project page
         ArrayAdapter<String> myAdapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, taskList);
