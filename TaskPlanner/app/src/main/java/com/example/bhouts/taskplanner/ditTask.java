@@ -123,7 +123,8 @@ public class ditTask extends AppCompatActivity {
         setContentView(R.layout.activity_dit_task);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-                final EditText notes =  (EditText) findViewById(R.id.notes);
+
+        final EditText notes =  (EditText) findViewById(R.id.notes);
                 String notes1 = notes.getText().toString();
 
                 Task newTask = new Task();

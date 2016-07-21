@@ -19,7 +19,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class editProject extends  AppCompatActivity {
+public class editProject extends AppCompatActivity {
 
 //    View.OnClickListener listen_project = null;
 //    Button project_enter;
@@ -68,7 +68,7 @@ public class editProject extends  AppCompatActivity {
         }
         String [] wtf = new String[size];
         for (int y=0; y<size; y++){
-            wtf[0] = ;
+            wtf[0] = "";
         }
 
         //String[] projectTasks = {"task0", "task1", "task2", "task3"};
