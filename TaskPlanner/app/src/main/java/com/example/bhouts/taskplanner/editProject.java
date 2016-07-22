@@ -47,6 +47,12 @@ public class editProject extends AppCompatActivity {
 
     }
 
+    //called when a task is selected
+    public void goToTask(View view) {
+        Intent go_ditTask = new Intent(this, editTask.class);
+        startActivity(go_ditTask);
+    }
+
     /*called when task fab button pushed- open ditTask, with preDetermined Project*/
     public void newTask_withDetProj(View view) {
         Intent go_ditTask = new Intent(this, editTask.class);
@@ -71,7 +77,7 @@ public class editProject extends AppCompatActivity {
         ExpListItems = SetStandardGroups();
         ExpAdapter = new ExpandListAdapter(editProject.this, ExpListItems);
         ExpandList.setAdapter(ExpAdapter);
-        
+
 
     }
 
@@ -105,25 +111,26 @@ public class editProject extends AppCompatActivity {
         }else{
             taskList[0] = "Just Do It!!";
         }
-
+        //set To Do items
         for (int n=0;n<size;n++){
             final ExpandListChild ch = new ExpandListChild();
             String name = taskList[i];
             ch.setName(name);
             chList.add(ch);
 
-//            //listview on child click listener
-//            ExpandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-//                @Override
-//                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-//                    Gbl.passProjName = Gbl.list_of_projects.get(childPosition);
-//                    newProject(ExpandList);
-//                    return false;
-//                }
-//
-//            });
+            //listview on child click listener
+            ExpandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+                @Override
+                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                    //Gbl.passTaskName = Gbl.list_of_projects.get(childPosition);  //get tasks name
+                    goToTask(ExpandList);
+                    return false;
+                }
+
+            });
 
         }
+        //set Completed items
 
         toDo.setItems(chList);
         comp.setItems(chList);
