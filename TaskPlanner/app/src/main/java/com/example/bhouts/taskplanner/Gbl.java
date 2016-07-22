@@ -54,7 +54,7 @@ public class Gbl {
         if (Gbl.isProject(ProjName)){
             //add task to project
             int pos = Gbl.getPos(ProjName);
-            Gbl.allProjectsDatabase.get(pos).addTask(Gbl.allProjectsDatabase.get(pos), task);
+            Gbl.allProjectsDatabase.get(pos).addTask(task);
         }else{
             //create new project
             Project newProject = new Project(ProjName);

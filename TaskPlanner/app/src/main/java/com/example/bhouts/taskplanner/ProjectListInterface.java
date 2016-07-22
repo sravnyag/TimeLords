@@ -15,47 +15,64 @@ public interface ProjectListInterface {
     // pre: none
     // post: adds name to initially empty Tname attribute in a task obj
     // notes:
-    public abstract void setProjName(ProjectList proj, String userInput);
+    void setProjName(String userInput);
 
     // addTask
     // pre: none
     // post: adds task to taskList ArrayList
     // notes:
-    public abstract void addTask(ProjectList proj, Task task);
+    void addTask(Task task);
 
     // isProjComplete
     // pre: none
     // post: returns true if project is complete, false otherwise
-    public abstract boolean isProjComplete(ProjectList proj);
+    boolean isProjComplete();
 
     // changeProjComplete
     // pre: none
     // post: if complete, sets to incomplete--if incomplete sets to complete
     // notes: to be used in method to check "done" box on GUI
-    public abstract void changeProjComplete(ProjectList proj);
+    void changeProjComplete();
 
     // hasTask
     // pre: none
     // post: returns true if project has task in
     // notes:
-    public abstract boolean hasTask(ProjectList proj, Task task);
+    boolean hasTask(Task task);
 
     // getProjName
     // pre: none
     // post: returns true if project has task in
     // notes:
-    public abstract String getProjName();
+    String getProjName();
 
     // getTaskList
     // pre: none
     // post:
     // notes:
-    public abstract String[] getTaskList();
+    String[] getTaskList();
 
     // getTaskListSize
     // pre: none
     // post:
     // notes:
-    public abstract int getTaskListSize();
+    public int getTaskListSize();
+
+    // isProject
+    // pre: none
+    // post: returns true if project exists
+    //       else returns false
+    public boolean isProject(String projectName);
+
+    // getProject
+    // pre: isProject != null
+    // post: returns project
+    // throws: projectDoesNotExist
+    public Project getProject (String projectName);
+
+    // newProject
+    // pre: none
+    // post: creates project and adds to projList
+    public Project newProject(String projectName);
 
 }
