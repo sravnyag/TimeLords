@@ -1,4 +1,5 @@
 package com.example.bhouts.taskplanner;
+import java.text.DateFormat;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -88,7 +89,7 @@ public class Task implements TaskInterface{
     // pre: none
     // post: changes Tname field
     public void setName(String userInput){
-        if (userInput != null && userInput != "" ){
+        if ( utils.isValidInput(userInput) ){
             Pattern p = Pattern.compile("\\s+");
             Matcher m = p.matcher(userInput);
             boolean b = m.matches();
@@ -104,18 +105,28 @@ public class Task implements TaskInterface{
     // post: adds notes to initially empty notes attribute in a task obj
     // notes: edit so you can edit notes not just set notes
     public void setNotes(String userInput){
-        this.Notes = userInput;
+        if ( utils.isValidInput(userInput) ) {
+            this.Notes = userInput;
+        }
     }
 
     // setProject
     // pre: none
     // post: sets Project for a given task obj
-    // notes: create check for existing project-if project DNE call create new project method
+    // notes: checks for existing project-if project DNE call create new project method
     //        if user sets to whitespace or null then go back to default project
-    public void setProject(String userInput){
-        if ( userInput != null | !userInput.equals("\\s+") ) {
-            this.Pname = userInput;
+    public void setProject(String projectName){
+        if ( utils.isValidInput(projectName) ) {
+            this.Pname = projectName;
         }
+        else {
+            projectName = this.Pname;
+        }
+        if ( !Gbl.projList.isProject(projectName) ) {
+            Gbl.projList.newProject(projectName);
+        }
+        Project project = Gbl.projList.getProject(projectName);
+        project.addTask(this);
     }
 
     // setDueDate - this
@@ -128,9 +139,9 @@ public class Task implements TaskInterface{
     // setDuration
     // pre: none
     // post: sets Duration for a task obj
-    public void setDuration(Duration userInput){
+/*    public void setDuration(Duration userInput){
         this.duration = userInput;
-    }
+    }*/
 
     // setPriority
     // pre: none
@@ -219,6 +230,9 @@ public class Task implements TaskInterface{
     public String printPriority() {
         return this.priority.toString();
     }
+
+
+
 
 
 }

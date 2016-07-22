@@ -1,5 +1,6 @@
 package com.example.bhouts.taskplanner;
 
+import java.text.DateFormat;
 import java.util.Date;
 
 import javax.xml.datatype.Duration;
@@ -36,7 +37,7 @@ public interface TaskInterface {
     // setDuration
     // pre: none
     // post: sets Duration for a task obj
-    public void setDuration(Duration userInput);
+    //public void setDuration(Duration userInput);
 
     // setPriority - this
     // pre: none
@@ -68,30 +69,30 @@ public interface TaskInterface {
     // pre: none
     // post:
     // notes:
-    public abstract String getName();
+    public String getName();
 
     // getProName
     // pre: none
     // post:
     // notes:
-    public abstract String getProName();
+    public String getProName();
 
     // getNotes
     // pre: none
     // post:
     // notes:
-    public abstract String getNotes();
+    public String getNotes();
 
     // getComp
     // pre: none
     // post:
     // notes:
-    public abstract boolean getComp();
+    public boolean getComp();
 
     // getDueDate
     // pre: none
     // post:
     // notes:
-    public abstract Date getDueDate();
+    public Date getDueDate();
 
 }
