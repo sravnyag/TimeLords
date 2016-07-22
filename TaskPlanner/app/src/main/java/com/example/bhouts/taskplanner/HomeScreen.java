@@ -40,6 +40,18 @@ public class HomeScreen extends AppCompatActivity {
         startActivity(go_dump);
     }
 
+    //called when qTask button pushed..send to dump page
+    public void goQtask(View view) {
+        Intent go_qTask = new Intent(this, qTask.class);
+        startActivity(go_qTask);
+    }
+
+    //called when Urgent button pushed..send to dump page
+    public void goUrgent(View view) {
+        Intent go_urgent = new Intent(this, Urgent.class);
+        startActivity(go_urgent);
+    }
+
 
     //variables for collapsible project list
     private ExpandListAdapter ExpAdapter;
@@ -70,6 +82,7 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Gbl.passProjName = "New Project";
+                Gbl.passTaskName = "New Task";
                 if (Gbl.hidden == Boolean.TRUE){
                     Gbl.fab_task.show();
                     Gbl.fab_project.show();

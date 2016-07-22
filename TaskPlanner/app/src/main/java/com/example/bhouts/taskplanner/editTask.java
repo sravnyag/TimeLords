@@ -136,12 +136,18 @@ public class editTask extends AppCompatActivity {
         spinner2.setAdapter(dataAdapter2);
     }
 
+    //method to resolve the name of the header
+    public String getTaskName(){
+        return Gbl.passTaskName;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_task);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(getTaskName());
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.

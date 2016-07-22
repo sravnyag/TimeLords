@@ -21,6 +21,8 @@ public class Gbl {
     //gbl varibale to pass the name of a project to so can display on editProjects header
     public static String passProjName = "New Project";
 
+    //gbl variable to pass the name of a task so it can display on ditTasks header
+    public static String passTaskName = "New Task";
 
     //Projectlist with all projects as tasklist
     public static ProjectList projList = new ProjectList();

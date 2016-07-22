@@ -44,11 +44,34 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.bhouts.taskplanner.HomeScreen" />
+
         </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+ <!--       </activity>
+        <activity
+            android:name=".qTask"
+            android:label="@string/title_activity_q_task"
+            android:parentActivityName=".HomeScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.bhouts.taskplanner.HomeScreen" />
+        </activity>
+        <activity
+            android:name=".Urgent"
+            android:label="@string/title_activity_urgent"
+            android:parentActivityName=".HomeScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.bhouts.taskplanner.HomeScreen" />
+        </activity>
+ -->
+
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ExpandableListView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -19,6 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class editProject extends AppCompatActivity {
+
+    //variables for collapsible task list
+    private ExpandListAdapter ExpAdapter;
+    private ArrayList<ExpandListGroup> ExpListItems;
+    private ExpandableListView ExpandList;
 
 
 
@@ -41,6 +47,18 @@ public class editProject extends AppCompatActivity {
 
     }
 
+    //called when a task is selected
+    public void goToTask(View view) {
+        Intent go_ditTask = new Intent(this, editTask.class);
+        startActivity(go_ditTask);
+    }
+
+    /*called when task fab button pushed- open ditTask, with preDetermined Project*/
+    public void newTask_withDetProj(View view) {
+        Intent go_ditTask = new Intent(this, editTask.class);
+        startActivity(go_ditTask);
+    }
+
     public String getProjName(){
         return Gbl.passProjName;
     }
@@ -54,6 +72,27 @@ public class editProject extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(getProjName());
+        //expandable project list
+        ExpandList = (ExpandableListView) findViewById(R.id.ExpToDoList);
+        ExpListItems = SetStandardGroups();
+        ExpAdapter = new ExpandListAdapter(editProject.this, ExpListItems);
+        ExpandList.setAdapter(ExpAdapter);
+
+
+    }
+
+    //collapsible list of projects
+    public ArrayList<ExpandListGroup> SetStandardGroups() {
+
+        ArrayList<ExpandListGroup> grList = new ArrayList<ExpandListGroup>();
+
+        ArrayList<ExpandListChild> chList = new ArrayList<ExpandListChild>();
+
+        ExpandListGroup toDo = new ExpandListGroup();
+        toDo.setName("To Do:");
+
+        ExpandListGroup comp = new ExpandListGroup();
+        comp.setName("Completed:");
 
         //get string array of tasks
         //get project position
@@ -64,23 +103,43 @@ public class editProject extends AppCompatActivity {
         if (!Gbl.passProjName.equals("New Project")){
             size = Gbl.allProjectsDatabase.get(i).getTaskListSize();
         }else{
-            size = 0;
+            size = 1;
         }
         String[] taskList = new String[size];
         if (!Gbl.passProjName.equals("New Project")) {
             taskList = Gbl.allProjectsDatabase.get(i).getTaskList();
+        }else{
+            taskList[0] = "Just Do It!!";
         }
+        //set To Do items
+        for (int n=0;n<size;n++){
+            final ExpandListChild ch = new ExpandListChild();
+            String name = taskList[i];
+            ch.setName(name);
+            chList.add(ch);
 
+            //listview on child click listener
+            ExpandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+                @Override
+                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                    int pos = Gbl.getPos(getProjName());
+                    //get task name to pass to gbl variable such that ditTask page will display it
+                    Gbl.passTaskName = Gbl.allProjectsDatabase.get(pos).getTaskList()[childPosition];
+                    goToTask(ExpandList);
+                    return false;
+                }
 
-        //set the list of tasks for the project page
-        ArrayAdapter<String> myAdapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, taskList);
+            });
 
-        ListView list_of_tasks=(ListView) findViewById(R.id.project_task_list);
+        }
+        //set Completed items
 
-        list_of_tasks.setAdapter(myAdapter);
+        toDo.setItems(chList);
+        comp.setItems(chList);
+        grList.add(toDo);
+        grList.add(comp);
 
-
-
+        return grList;
     }
 
 
