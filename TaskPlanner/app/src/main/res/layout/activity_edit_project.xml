@@ -9,4 +9,13 @@
 
     <include layout="@layout/content_edit_project" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_task_fromProj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="5dp"
+        android:src="@drawable/letter_t"
+        android:onClick="newTask_withDetProj" />  //add task where project is automatically selected
+
 </android.support.design.widget.CoordinatorLayout>

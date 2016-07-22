@@ -45,6 +45,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.bhouts.taskplanner.HomeScreen" />
         </activity>
+        <activity
+            android:name=".qTask"
+            android:label="@string/title_activity_q_task"
+            android:parentActivityName=".HomeScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.bhouts.taskplanner.HomeScreen" />
+        </activity>
+        <activity
+            android:name=".Urgent"
+            android:label="@string/title_activity_urgent"
+            android:parentActivityName=".HomeScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.bhouts.taskplanner.HomeScreen" />
+        </activity>
     </application>
 
 </manifest>
