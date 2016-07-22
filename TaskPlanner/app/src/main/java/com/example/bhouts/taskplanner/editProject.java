@@ -122,7 +122,9 @@ public class editProject extends AppCompatActivity {
             ExpandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
                 @Override
                 public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                    //Gbl.passTaskName = Gbl.list_of_projects.get(childPosition);  //get tasks name
+                    int pos = Gbl.getPos(getProjName());
+                    //get task name to pass to gbl variable such that ditTask page will display it
+                    Gbl.passTaskName = Gbl.allProjectsDatabase.get(pos).getTaskList()[childPosition];
                     goToTask(ExpandList);
                     return false;
                 }
