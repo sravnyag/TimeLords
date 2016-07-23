@@ -154,7 +154,7 @@ public class editTask extends AppCompatActivity {
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-    @Override
+/*    @Override
     public void onStart() {
         super.onStart();
 
@@ -191,6 +191,6 @@ public class editTask extends AppCompatActivity {
                 Uri.parse("android-app://com.example.bhouts.taskplanner/http/host/path")
         );
         AppIndex.AppIndexApi.end(client, viewAction);
-        client.disconnect();
-    }
+        client.disconnect();*/
+    //}
 }
