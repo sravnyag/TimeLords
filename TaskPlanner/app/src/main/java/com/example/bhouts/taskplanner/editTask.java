@@ -27,7 +27,7 @@ public class editTask extends AppCompatActivity {
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-//    private GoogleApiClient client;
+    private GoogleApiClient client;
 
 //    View.OnClickListener listen_task = null;
 //    Button task_enter;
@@ -145,7 +145,7 @@ public class editTask extends AppCompatActivity {
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
-//        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
 /*    @Override
