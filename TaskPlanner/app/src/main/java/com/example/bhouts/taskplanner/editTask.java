@@ -160,6 +160,10 @@ public class editTask extends AppCompatActivity {
         getSupportActionBar().setTitle(getTaskName());
 
         setHints();
+        populatePrioritySpinner(
+                (Spinner) findViewById(R.id.priority_choice),
+                (Spinner) findViewById(R.id.tag_choice)
+        );
 
     }
 }
