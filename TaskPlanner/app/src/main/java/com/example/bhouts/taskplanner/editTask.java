@@ -134,5 +134,10 @@ public class editTask extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(getTaskName());
 
+        populatePrioritySpinner(
+                (Spinner) findViewById(R.id.priority_choice),
+                (Spinner) findViewById(R.id.tag_choice)
+        );
+
     }
 }
