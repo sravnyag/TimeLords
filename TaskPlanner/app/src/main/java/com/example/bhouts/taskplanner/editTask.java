@@ -12,6 +12,8 @@ import android.widget.EditText;
 
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Date;
@@ -66,7 +68,13 @@ public class editTask extends AppCompatActivity {
             String DueDateStr =
                     ((EditText) findViewById(R.id.textDueDate))
                             .getText().toString();
-            newTask.setDueDate(format.parse(DueDateStr));
+            Date temp = format.parse(DueDateStr);
+            if (temp.toString()!=null){
+                newTask.setDueDate(temp);
+            }else{
+                temp = format.parse("01/01/01");
+                newTask.setDueDate(temp);
+            }
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -81,6 +89,23 @@ public class editTask extends AppCompatActivity {
         Intent goHome = new Intent(this, HomeScreen.class);
         startActivity(goHome);
 
+    }
+
+    public void setHints(){//if simply ceating new task, reqular hints
+        if (Gbl.passTaskName.equals("New Task")){
+            ((TextView) findViewById(R.id.taskName)).setHint("Task:");
+            ((TextView) findViewById(R.id.projectAttName)).setHint("Project:");
+            ((TextView) findViewById(R.id.notes)).setHint("Notes:");
+            ((TextView) findViewById(R.id.textDueDate)).setHint("Due Date:");
+            //else the hint fields will display the task's attributes
+        }else{
+            ((TextView) findViewById(R.id.taskName)).setHint("Task: " + Gbl.passTaskName);
+            ((TextView) findViewById(R.id.projectAttName)).setHint("Project: " + Gbl.passProjName);
+            String notes = Gbl.getProjWithName(Gbl.passProjName).getTaskWithName(Gbl.passTaskName).getNotes();
+            String date = Gbl.getProjWithName(Gbl.passProjName).getTaskWithName(Gbl.passTaskName).getDueDate().toString();
+            ((TextView) findViewById(R.id.notes)).setHint("Notes: " + notes);
+            ((TextView) findViewById(R.id.textDueDate)).setHint("Due Date:" + date);
+        }
     }
 
     private Spinner priority;
@@ -133,6 +158,8 @@ public class editTask extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(getTaskName());
+
+        setHints();
 
     }
 }

@@ -9,10 +9,12 @@ public class ProjectList implements ProjectListInterface{
     public Boolean Completed;
     public ArrayList<Task> TaskList = new ArrayList<Task>();
 
+
     //constructor
     public ProjectList(){
         ProjName = "All Projects";
         Completed = false;
+
     }
 
     // setProjName
@@ -80,6 +82,20 @@ public class ProjectList implements ProjectListInterface{
     // notes:
     public int getTaskListSize(){
         return TaskList.size();
+    }
+
+    // getTaskWithName
+    // pre: TaskList is non-empty
+    // post:returns tsk with the name from project's tasklist
+    // notes:
+    public Task getTaskWithName(String name){
+        int size = getTaskListSize();
+        for (int i=0;i<size;i++){
+            if (TaskList.get(i).getName().equals(name)){
+                return TaskList.get(i);
+            }
+        }
+        return TaskList.get(0);
     }
 
 }
