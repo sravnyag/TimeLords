@@ -75,7 +75,7 @@ public class editTask extends AppCompatActivity {
                 ((EditText) findViewById(R.id.notes))
                         .getText().toString();
         newTask.setPriority(((priorityStr.equals(null)) ?
-                "no_name" :
+                "none" :
                 priorityStr));
 
         Intent goHome = new Intent(this, HomeScreen.class);
