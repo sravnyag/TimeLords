@@ -13,27 +13,35 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_task"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        android:layout_margin="5dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        app:layout_anchor="@id/fab_show"
+        app:layout_anchorGravity="left|bottom"
+        app:elevation="@dimen/fab_margin"
+
         android:src="@drawable/letter_t"
         android:onClick="newTask" />
 
+    <!-- New Project -->
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_project"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|end"
-        app:fabSize="mini"
-        android:layout_margin="@dimen/fab_margin"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        app:layout_anchor="@id/fab_show"
+        app:layout_anchorGravity="top|right"
+        app:elevation="@dimen/fab_margin"
+
         android:src="@drawable/letter_p"
         android:onClick="newProject"/>
 
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_show"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/plus" />
