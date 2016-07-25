@@ -8,4 +8,5 @@
     <dimen name="link_pad_top">5dp</dimen>
     <dimen name="link_text_size">50sp</dimen>
     <dimen name="link_height">70dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>
