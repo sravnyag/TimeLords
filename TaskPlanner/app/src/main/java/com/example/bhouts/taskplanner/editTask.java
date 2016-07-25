@@ -12,6 +12,8 @@ import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 
 import java.util.Date;
+import android.widget.TextView;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.text.DateFormat;
@@ -80,14 +82,25 @@ public class editTask extends AppCompatActivity {
 
 
     public void newTask() {
-        Task task = new Task();
-        task.setName(collectNameInput());
-        task.setProject(collectProjectInput());
-        task.setNotes(collectNotesInput());
-        task.setDueDate(collectDueDateInput());
+        Task newTask = new Task();
+        newTask.setName(collectNameInput());
+        newTask.setProject(collectProjectInput());
+        newTask.setNotes(collectNotesInput());
+        newTask.setDueDate(collectDueDateInput());
         //task.setPriority(collectPriorityInput());
         //task.editTags(collectTagInput());
-    }
+
+
+        //set priorit level
+        String priorityStr =
+                ((EditText) findViewById(R.id.notes))
+                        .getText().toString();
+        newTask.setPriority(((priorityStr.equals(null)) ?
+                "none" :
+        priorityStr));
+        }
+
+
 
 
     //when ENTER button clicked, go to homescreen
@@ -96,6 +109,23 @@ public class editTask extends AppCompatActivity {
         Intent goHome = new Intent(this, HomeScreen.class);
         startActivity(goHome);
 
+    }
+
+    public void setHints(){//if simply ceating new task, reqular hints
+        if (Gbl.passTaskName.equals("New Task")){
+            ((TextView) findViewById(R.id.taskName)).setHint("Task:");
+            ((TextView) findViewById(R.id.projectAttName)).setHint("Project:");
+            ((TextView) findViewById(R.id.notes)).setHint("Notes:");
+            ((TextView) findViewById(R.id.textDueDate)).setHint("Due Date:");
+            //else the hint fields will display the task's attributes
+        }else{
+            ((TextView) findViewById(R.id.taskName)).setHint("Task: " + Gbl.passTaskName);
+            ((TextView) findViewById(R.id.projectAttName)).setHint("Project: " + Gbl.passProjName);
+            String notes = Gbl.getProjWithName(Gbl.passProjName).getTaskWithName(Gbl.passTaskName).getNotes();
+            String date = Gbl.getProjWithName(Gbl.passProjName).getTaskWithName(Gbl.passTaskName).getDueDate().toString();
+            ((TextView) findViewById(R.id.notes)).setHint("Notes: " + notes);
+            ((TextView) findViewById(R.id.textDueDate)).setHint("Due Date:" + date);
+        }
     }
 
     private Spinner priority;
@@ -143,48 +173,18 @@ public class editTask extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
+        setHints();
+        populatePrioritySpinner(
+                (Spinner) findViewById(R.id.priority_choice),
+                (Spinner) findViewById(R.id.tag_choice)
+        );
+
     }
 
-/*    @Override
-    public void onStart() {
-        super.onStart();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "editTask Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app URL is correct.
-                Uri.parse("android-app://com.example.bhouts.taskplanner/http/host/path")
-        );
-        AppIndex.AppIndexApi.start(client, viewAction);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "editTask Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app URL is correct.
-                Uri.parse("android-app://com.example.bhouts.taskplanner/http/host/path")
-        );
-        AppIndex.AppIndexApi.end(client, viewAction);
-        client.disconnect();*/
-    //}
 }

@@ -8,5 +8,11 @@
     <dimen name="link_pad_top">5dp</dimen>
     <dimen name="link_text_size">50sp</dimen>
     <dimen name="link_height">70dp</dimen>
+<<<<<<< HEAD
     <dimen name="text_margin">16dp</dimen>
+=======
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+>>>>>>> f3bf684c38d0ea7a924a1a87a62687091bfc2564
 </resources>

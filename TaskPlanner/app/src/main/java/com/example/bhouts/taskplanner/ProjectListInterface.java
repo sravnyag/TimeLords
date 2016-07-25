@@ -75,4 +75,10 @@ public interface ProjectListInterface {
     // post: creates project and adds to projList
     public Project newProject(String projectName);
 
+    // getTaskWithName
+    // pre: none
+    // post:returns tsk with the name from project's tasklist
+    // notes:
+    public abstract Task getTaskWithName(String name);
+
 }

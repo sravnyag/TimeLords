@@ -16,6 +16,6 @@
         android:layout_gravity="top|end"
         android:layout_margin="5dp"
         android:src="@drawable/letter_t"
-        android:onClick="newTask_withDetProj" />  //add task where project is automatically selected
+        android:onClick="newTask_withDetProj" />
 
 </android.support.design.widget.CoordinatorLayout>

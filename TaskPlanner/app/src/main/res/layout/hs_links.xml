@@ -7,7 +7,9 @@
         android:id="@+id/dump_link"
         android:layout_width="match_parent"
         android:layout_height="@dimen/link_height"
-        android:text="Brain-Dump"
+
+        android:text="Brain Dump"
+
         android:background="@color/White"
         android:textColor="@color/Blue"
         android:textSize="@dimen/link_text_size"

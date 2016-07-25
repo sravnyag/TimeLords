@@ -29,7 +29,7 @@ public class editProject extends AppCompatActivity {
 
 
     //called when user clicks "ENTER" button
-    public void goHSfromProj(View view) {
+    public void projEnter(View view) {
         final EditText projectName =  (EditText) findViewById(R.id.projectName);
         String projectName1 = projectName.getText().toString();
 
