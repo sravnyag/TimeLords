@@ -49,12 +49,18 @@ public class Gbl {
         return (0); //would be an error
     }
 
+    //returns the project with associated argument's name
+    public static ProjectList getProjWithName(String name){
+        int pos = Gbl.getPos(name);
+        return Gbl.allProjectsDatabase.get(pos);
+    }
+
     //check to see if task's project already exists, if not create new project then add
     public static void addTaskToProj(Task task, String ProjName){
         if (Gbl.isProject(ProjName)){
             //add task to project
             int pos = Gbl.getPos(ProjName);
-            Gbl.allProjectsDatabase.get(pos).addTask(Gbl.allProjectsDatabase.get(pos), task);
+            Gbl.allProjectsDatabase.get(pos).addTask(task);
         }else{
             //create new project
             Project newProject = new Project(ProjName);

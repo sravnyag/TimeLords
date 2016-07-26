@@ -9,44 +9,46 @@ public class ProjectList implements ProjectListInterface{
     public Boolean Completed;
     public ArrayList<Task> TaskList = new ArrayList<Task>();
 
+
     //constructor
     public ProjectList(){
         ProjName = "All Projects";
         Completed = false;
+
     }
 
     // setProjName
     // pre: none
     // post: adds name to initially empty Tname attribute in a task obj
     // notes:
-    public void setProjName(ProjectList proj, String userInput){
-        proj.ProjName = userInput;
+    public void setProjName(String userInput){
+        this.ProjName = userInput;
     }
 
     // addTask
     // pre: none
     // post: adds task to taskList ArrayList
     // notes:
-    public void addTask(ProjectList proj, Task task){
-        proj.TaskList.add(task);
+    public void addTask(Task task){
+        this.TaskList.add(task);
     }
 
     // isProjComplete
     // pre: none
     // post: returns true if project is complete, false otherwise
-    public boolean isProjComplete(ProjectList proj){
-        return proj.Completed;
+    public boolean isProjComplete(){
+        return this.Completed;
     }
 
     // changeProjComplete
     // pre: none
     // post: if complete, sets to incomplete--if incomplete sets to complete
     // notes: to be used in method to check "done" box on GUI
-    public void changeProjComplete (ProjectList proj){
-        if (proj.isProjComplete(proj)){
-            proj.Completed = false;
+    public void changeProjComplete (){
+        if (this.isProjComplete()){
+            this.Completed = false;
         } else {
-            proj.Completed = true;
+            this.Completed = true;
         }
     }
 
@@ -54,11 +56,11 @@ public class ProjectList implements ProjectListInterface{
     // pre: none
     // post: returns true if project has task in
     // notes:
-    public boolean hasTask(ProjectList proj, Task task){return proj.TaskList.contains(task);
+    public boolean hasTask(Task task){return this.TaskList.contains(task);
     }
 
     public String getProjName(){
-        return ProjName;
+        return this.ProjName;
     }
 
     // getTaskList
@@ -81,5 +83,61 @@ public class ProjectList implements ProjectListInterface{
     public int getTaskListSize(){
         return TaskList.size();
     }
+
+
+    // isProject
+    // pre: none
+    // post: returns true if project exists
+    //       else returns false
+    public boolean isProject(String projectName) {
+        // search project list by pname
+        // if found return true
+        // else return false
+        return true;
+    }
+
+    // getProject
+    // pre: isProject != null
+    // post: returns project
+    // throws: projectDoesNotExist
+    public Project getProject (String projectName) {
+        // search project list by pname
+        // if found return project
+        // else throw exception
+        return new Project(projectName);
+    }
+
+    // newProject
+    // pre: none
+    // post: creates project and adds to projList
+    public Project newProject(String projectName) {
+        Project newProject = new Project(projectName);
+        Gbl.projList.addProject(newProject);
+        return new Project(projectName);
+    }
+
+    // addProject
+    // pre: none
+    // post: adds project to projList
+    private Project addProject(Project project) {
+
+        return project;
+    }
+
+
+    // getTaskWithName
+    // pre: TaskList is non-empty
+    // post:returns tsk with the name from project's tasklist
+    // notes:
+    public Task getTaskWithName(String name){
+        int size = getTaskListSize();
+        for (int i=0;i<size;i++){
+            if (TaskList.get(i).getName().equals(name)){
+                return TaskList.get(i);
+            }
+        }
+        return TaskList.get(0);
+    }
+
 
 }

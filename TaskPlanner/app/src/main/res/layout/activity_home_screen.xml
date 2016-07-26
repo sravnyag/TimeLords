@@ -16,7 +16,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
 
-        app:layout_anchor="@id/fab_show"
+        app:layout_anchor="@+id/fab_show"
         app:layout_anchorGravity="left|bottom"
         app:elevation="@dimen/fab_margin"
 
@@ -26,10 +26,11 @@
     <!-- New Project -->
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_project"
+
         android:layout_width="50dp"
         android:layout_height="50dp"
 
-        app:layout_anchor="@id/fab_show"
+        app:layout_anchor="@+id/fab_show"
         app:layout_anchorGravity="top|right"
         app:elevation="@dimen/fab_margin"
 

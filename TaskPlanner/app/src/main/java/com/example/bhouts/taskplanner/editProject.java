@@ -29,7 +29,7 @@ public class editProject extends AppCompatActivity {
 
 
     //called when user clicks "ENTER" button
-    public void goHSfromProj(View view) {
+    public void projEnter(View view) {
         final EditText projectName =  (EditText) findViewById(R.id.projectName);
         String projectName1 = projectName.getText().toString();
 
@@ -122,9 +122,7 @@ public class editProject extends AppCompatActivity {
             ExpandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
                 @Override
                 public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                    int pos = Gbl.getPos(getProjName());
-                    //get task name to pass to gbl variable such that ditTask page will display it
-                    Gbl.passTaskName = Gbl.allProjectsDatabase.get(pos).getTaskList()[childPosition];
+                    //Gbl.passTaskName = Gbl.list_of_projects.get(childPosition);  //get tasks name
                     goToTask(ExpandList);
                     return false;
                 }

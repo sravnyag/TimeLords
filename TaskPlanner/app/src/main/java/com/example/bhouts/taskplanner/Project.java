@@ -12,9 +12,19 @@ public class Project extends ProjectList{
         task.setName(ProjName);
         task.setProject("All Projects");
         //add project as task to projTask
-        Gbl.projList.addTask(Gbl.projList, task);
+        Gbl.projList.addTask(task);
         //add Project to global String list of all projects
         Gbl.list_of_projects.add(task.getName());
         //must add project to "allProjectsDatabase" ArrayList along with the creation of a new Project (not done here)
     }
+
+
+
+
+
+    public Task addTask() {
+        return new Task();
+    }
+
+
 }

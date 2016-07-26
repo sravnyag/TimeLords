@@ -84,7 +84,6 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Gbl.passProjName = "New Project";
-                Gbl.passTaskName = "New Task";
                 if (Gbl.hidden == Boolean.TRUE){
                     Gbl.fab_task.show();
                     Gbl.fab_project.show();

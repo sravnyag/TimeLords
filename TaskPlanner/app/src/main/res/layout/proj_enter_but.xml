@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:text="ENTER"
         android:layout_alignParentBottom="true"
-        android:onClick="goHSfromProj"/>
+        android:onClick="projEnter"/>
 
 
 </LinearLayout>
