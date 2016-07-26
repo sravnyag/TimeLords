@@ -20,6 +20,8 @@ import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ExpandableListView;
@@ -91,6 +93,7 @@ public class HomeScreen extends AppCompatActivity {
         //initially hide these two fabs
         Gbl.fab_task.hide();
         Gbl.fab_project.hide();
+        Gbl.
         listener1 = new OnClickListener(){
             @Override
             public void onClick(View v) {

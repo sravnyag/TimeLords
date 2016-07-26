@@ -3,7 +3,7 @@ package com.example.bhouts.taskplanner;
 /**
  * Created by bhouts on 7/10/2016.
  */
-public class Project extends ProjectList{
+    public class Project extends ProjectList{
 
     private int _id;
     public Project(String name){

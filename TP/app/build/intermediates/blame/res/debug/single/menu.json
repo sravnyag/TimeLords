@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Julia\\School\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_home_screen.xml",
-        "source": "C:\\Users\\Julia\\School\\TimeLords\\TP\\app\\src\\main\\res\\menu\\menu_home_screen.xml"
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\menu\\drawer_menu.xml",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\menu\\drawer_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Julia\\School\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\menu\\drawer_menu.xml",
-        "source": "C:\\Users\\Julia\\School\\TimeLords\\TP\\app\\src\\main\\res\\menu\\drawer_menu.xml"
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_home_screen.xml",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\menu\\menu_home_screen.xml"
     }
 ]

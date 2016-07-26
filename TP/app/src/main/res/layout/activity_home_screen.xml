@@ -27,9 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
-            android:layout_toLeftOf="@id/fab_show"
             app:fabSize="mini"
-            android:layout_below="@id/fab_show"
             android:layout_margin="5dp"
             android:src="@drawable/letter_t"
             android:onClick="newTask" />
@@ -40,8 +38,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|end"
             app:fabSize="mini"
-            android:layout_toRightOf="@id/fab_show"
-            android:layout_above="@id/fab_show"
             android:layout_margin="@dimen/fab_margin"
             android:src="@drawable/letter_p"
             android:onClick="newProject"/>
