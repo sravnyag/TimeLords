@@ -1,6 +1,7 @@
 package com.example.bhouts.taskplanner;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -11,9 +12,11 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.view.View.OnClickListener;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 
 public class HomeScreen extends AppCompatActivity {
@@ -26,6 +29,22 @@ public class HomeScreen extends AppCompatActivity {
     public void newTask(View view) {
         Intent go_ditTask = new Intent(this, editTask.class);
         startActivity(go_ditTask);
+        /////////////test code ////////////////////////////////////////////////////////////
+        DatabaseClass dbc = new DatabaseClass(getApplicationContext());
+        Cursor cursor = dbc.getProjects();
+        cursor.moveToFirst();
+        String temp = cursor.getString(1);
+        //dbc.deleteProject(temp);
+        cursor = dbc.getProjects();
+        int count = cursor.getCount();
+        String message = String.valueOf(count);
+        Toast.makeText(this,"cursor successfully reached first row",Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
+
+        dbc.close();
+        //////////////////////////////////////////////////////////////////////////
+
     }
 
     //called when fab button pushed/ when project from collapsible list is pushed

@@ -28,8 +28,8 @@ public class DatabaseOperations extends SQLiteOpenHelper{
     public static final String DUE_DATE = "duedate";
     public static final String COMPLETED = "completed";
 
-    public DatabaseOperations(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, DATABASE_NAME, factory, DATABASE_VERSION);
+    public DatabaseOperations(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
         Log.d("Database operations", "One row inserted");
     }
 
