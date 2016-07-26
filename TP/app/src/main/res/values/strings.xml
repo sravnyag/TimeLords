@@ -12,4 +12,9 @@
     <string name="title_activity_dump">Dump</string>
     <string name="done">DONE</string>
     <string name="enter">ENTER</string>
+
+    <string name="duration_text">Duration:</string>
+    <string name="duration_text_D"> days </string>
+    <string name="duration_text_H"> hrs </string>
+    <string name="duration_text_M"> min </string>
 </resources>

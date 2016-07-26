@@ -46,7 +46,7 @@ public class Task implements TaskInterface{
     public String Notes;         //task description
     public Boolean Completed;
     public Priority priority;
-    public Duration duration;
+    public int duration;
     public Tags tagList;
     public Date dateCreated;
     public Date dateDue;
@@ -94,7 +94,7 @@ public class Task implements TaskInterface{
         Notes = null;
         Completed = false;
         priority = null;
-        duration = null;
+        duration = 0;
         tagList = null;
         dateDue = null;
     }
@@ -142,8 +142,8 @@ public class Task implements TaskInterface{
     // setDuration
     // pre: none
     // post: sets Duration for a task obj
-    public void setDuration(Task task, Duration userInput){
-        task.duration = userInput;
+    public void setDuration(int userInput){
+        this.duration = userInput;
     }
 
     // setPriority - this
