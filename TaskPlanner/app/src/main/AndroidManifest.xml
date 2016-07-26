@@ -75,7 +75,7 @@
 =======
         <activity
             android:name=".AppMenu"
-            android:label="@string/title_activity_menu"
+            android:label="@string/title_activity_app_menu"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 >>>>>>> f3bf684c38d0ea7a924a1a87a62687091bfc2564
     </application>
