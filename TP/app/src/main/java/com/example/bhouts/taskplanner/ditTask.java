@@ -9,7 +9,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import java.util.List;
@@ -18,6 +17,7 @@ import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
+import android.widget.NumberPicker;
 
 public class ditTask extends AppCompatActivity {
 
@@ -132,5 +132,19 @@ public class ditTask extends AppCompatActivity {
         Spinner priority = (Spinner) findViewById(R.id.priority_choice);
         Spinner tag = (Spinner) findViewById(R.id.tag_choice);
         populatePrioritySpinner(project, priority, tag);
+
+        // set number picker constraints
+        NumberPicker npDurationD = (NumberPicker) findViewById(R.id
+                .pickerDurationD);
+        npDurationD.setMinValue(0);
+        npDurationD.setMaxValue(30);
+        NumberPicker npDurationH = (NumberPicker) findViewById(R.id
+                .pickerDurationH);
+        npDurationH.setMinValue(0);
+        npDurationH.setMaxValue(24);
+        NumberPicker npDurationM = (NumberPicker) findViewById(R.id
+                .pickerDurationM);
+        npDurationM.setMinValue(0);
+        npDurationM.setMaxValue(59);
     }
 }
