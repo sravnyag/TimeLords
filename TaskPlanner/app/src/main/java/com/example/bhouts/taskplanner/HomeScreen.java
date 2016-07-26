@@ -14,12 +14,14 @@ import android.view.View.OnClickListener;
 import java.util.ArrayList;
 
 import android.widget.ExpandableListView;
+import android.widget.SlidingDrawer;
 
 
 public class HomeScreen extends AppCompatActivity {
 
     OnClickListener listener1 = null;
     Button button1;
+
 
 
     /*called when fab button pushed*/
@@ -82,7 +84,6 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Gbl.passProjName = "New Project";
-                Gbl.passTaskName = "New Task";
                 if (Gbl.hidden == Boolean.TRUE){
                     Gbl.fab_task.show();
                     Gbl.fab_project.show();

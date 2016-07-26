@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TaskPlanner</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_dit_task">editTask</string>
+    <string name="TaskName_hint">Task:</string>
+    <string name="ProjectName_hint">Project:</string>
+    <string name="notes_hint">Notes:</string>
+    <string name="due_hint">Due Date:</string>
+    <string name="title_activity_edit_project">temp</string>
+    <string name="priority_level_text">Priority Level</string>
+    <string name="tag_text">Tag</string>
+    <string name="title_activity_dump">Dump</string>
+    <string name="done">DONE</string>
+    <string name="enter">ENTER</string>
+</resources>
