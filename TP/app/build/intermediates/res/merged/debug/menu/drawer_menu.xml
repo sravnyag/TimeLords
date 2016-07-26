@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/dump_id"
+            android:title="Brain Dump">
+            <!--android:icon="@drawable/"-->
+        </item>
+        <item
+            android:id="@+id/qtasks_id"
+            android:title="Quick Tasks">
+            <!--android:icon="@drawable/"-->
+        </item>
+        <item
+            android:id="@+id/urgent_id"
+            android:title="Urgent">
+            <!--android:icon="@drawable/"-->
+        </item>
+        <item
+            android:id="@+id/projectList_id"
+            android:title="Projects">
+            <!--android:icon="@drawable/"-->
+        </item>
+
+    </group>
+
+</menu>
