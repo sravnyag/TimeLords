@@ -10,6 +10,7 @@
     tools:context="com.example.bhouts.taskplanner.HomeScreen">
 
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,42 +20,45 @@
             android:layout_width="match_parent"
             layout = "@layout/toolbar_layout" />
 
+        <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                         xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                         xmlns:tools="http://schemas.android.com/tools"
+                                                         android:layout_width="match_parent"
+                                                         android:layout_height="match_parent"
+                                                         android:fitsSystemWindows="true"
+                                                         tools:context="com.example.bhouts.taskplanner.HomeScreen">
 
         <include layout="@layout/content_home_screen" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab_task"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:layout_toLeftOf="@id/fab_show"
-            app:fabSize="mini"
-            android:layout_below="@id/fab_show"
-            android:layout_margin="5dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_anchor="@+id/fab_show"
+            app:layout_anchorGravity="left|bottom"
+            app:elevation="@dimen/fab_margin"
             android:src="@drawable/letter_t"
             android:onClick="newTask" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab_project"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|end"
-            app:fabSize="mini"
-            android:layout_toRightOf="@id/fab_show"
-            android:layout_above="@id/fab_show"
-            android:layout_margin="@dimen/fab_margin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_anchor="@id/fab_show"
+            app:layout_anchorGravity="top|right"
+            app:elevation="@dimen/fab_margin"
             android:src="@drawable/letter_p"
             android:onClick="newProject"/>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab_show"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom|end"
             android:layout_margin="@dimen/fab_margin"
             android:src="@drawable/plus" />
+
+        </android.support.design.widget.CoordinatorLayout>
 
     </RelativeLayout>
 
