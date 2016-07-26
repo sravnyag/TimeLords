@@ -30,8 +30,9 @@ public class editProject extends  AppCompatActivity {
         //create new project with this name if doesn't already exist
         if (!Gbl.isProject(projectName1)){
             Project newProject = new Project(projectName1);
-
-            //add to all projects Database
+            ProjectDBObj obj = new ProjectDBObj(newProject);
+            obj.save();
+            //add to all projects DatabaseT
             Gbl.allProjectsDatabase.add(newProject);
         }
         //hide fab buttons on homescreen
