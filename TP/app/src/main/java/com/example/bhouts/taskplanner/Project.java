@@ -5,6 +5,7 @@ package com.example.bhouts.taskplanner;
  */
 public class Project extends ProjectList{
 
+    private int _id;
     public Project(String name){
         ProjName = name;
         //add project to global ProjectList "All Projects" as a Task
@@ -16,5 +17,13 @@ public class Project extends ProjectList{
         //add Project to global String list of all projects
         Gbl.list_of_projects.add(task.getName());
         //must add project to "allProjectsDatabase" ArrayList along with the creation of a new Project (not done here)
+    }
+
+    public void setID(int id) {
+        this._id = id;
+    }
+
+    public int getID() {
+        return this._id;
     }
 }
