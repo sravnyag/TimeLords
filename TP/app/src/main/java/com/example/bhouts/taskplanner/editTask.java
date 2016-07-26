@@ -2,24 +2,19 @@ package com.example.bhouts.taskplanner;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Date;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 import android.widget.NumberPicker;
 
-public class ditTask extends AppCompatActivity {
+public class editTask extends AppCompatActivity {
 
 //    View.OnClickListener listen_task = null;
 //    Button task_enter;
@@ -123,7 +118,7 @@ public class ditTask extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dit_task);
+        setContentView(R.layout.activity_edit_task);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

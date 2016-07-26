@@ -16,7 +16,6 @@ public class Gbl {
     public static FloatingActionButton fab_project;
     public static FloatingActionButton fab_show;
 
-    //
     public static void hide_fab(){
         Gbl.fab_task.hide();
         Gbl.fab_project.hide();

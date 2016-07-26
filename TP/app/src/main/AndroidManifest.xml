@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ditTask"
+            android:name=".editTask"
             android:label="@string/title_activity_dit_task"
             android:parentActivityName=".HomeScreen"
             android:theme="@style/AppTheme.NoActionBar">

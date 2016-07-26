@@ -1,28 +1,19 @@
 package com.example.bhouts.taskplanner;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import 	android.graphics.Color;
 import android.view.View.OnClickListener;
-import android.widget.ImageButton;
-import android.widget.ListView;
+
 import java.util.ArrayList;
-import android.app.Activity;
-import android.os.Bundle;
+
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
 
 public class HomeScreen extends AppCompatActivity {
@@ -33,7 +24,7 @@ public class HomeScreen extends AppCompatActivity {
 
     /*called when fab button pushed*/
     public void newTask(View view) {
-        Intent go_ditTask = new Intent(this, ditTask.class);
+        Intent go_ditTask = new Intent(this, editTask.class);
         startActivity(go_ditTask);
     }
 

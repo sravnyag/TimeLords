@@ -46,7 +46,6 @@ public class editProject extends  AppCompatActivity {
         return Gbl.passProjName;
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +83,5 @@ public class editProject extends  AppCompatActivity {
 
 
     }
-
 
 }
