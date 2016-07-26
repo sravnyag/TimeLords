@@ -9,7 +9,6 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.bhouts.taskplanner.HomeScreen">
 
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,6 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             layout = "@layout/toolbar_layout" />
+
         <include layout="@layout/content_home_screen" />
 
         <android.support.design.widget.FloatingActionButton
@@ -27,7 +27,7 @@
             android:layout_gravity="bottom|center"
             app:fabSize="mini"
             android:layout_margin="5dp"
-            android:src="@drawable/letter_t"
+            android:src="@drawable/mult_check"
             android:onClick="newTask" />
 
         <android.support.design.widget.FloatingActionButton
@@ -37,7 +37,7 @@
             android:layout_gravity="center|end"
             app:fabSize="mini"
             android:layout_margin="@dimen/fab_margin"
-            android:src="@drawable/letter_p"
+            android:src="@drawable/folder_plus"
             android:onClick="newProject"/>
 
         <android.support.design.widget.FloatingActionButton
@@ -48,7 +48,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_margin="@dimen/fab_margin"
-            android:src="@drawable/plus" />
+            android:src="@drawable/plus3" />
+
     </FrameLayout>
 
 
@@ -59,6 +60,11 @@
         android:layout_gravity="start"
         app:menu="@menu/drawer_menu"
         >
+
     </android.support.design.widget.NavigationView>
+
+
+
+
 
 </android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,12 @@
+CHANGED,C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\bhouts\taskplanner\R$drawable$override.class
+CHANGED,C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\design\R$drawable$override.class
+CHANGED,C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\bhouts\taskplanner\R$layout$override.class
+CHANGED,C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\v7\appcompat\R$drawable$override.class
+CHANGED,C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\bhouts\taskplanner\R$integer$override.class
+CHANGED,C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\bhouts\taskplanner\R$menu$override.class
+CHANGED,C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\bhouts\taskplanner\R$string$override.class
+CHANGED,C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\bhouts\taskplanner\R$id$override.class
+CHANGED,C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\bhouts\taskplanner\R$style$override.class
+CHANGED,C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\bhouts\taskplanner\R$styleable$override.class
+CHANGED,C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\bhouts\taskplanner\R$mipmap$override.class

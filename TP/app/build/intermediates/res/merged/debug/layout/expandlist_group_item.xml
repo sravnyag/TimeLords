@@ -3,17 +3,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="55dp"
-    android:background="@color/White"
+    android:background="@color/lightBackground"
     android:orientation="vertical" >
 
     <TextView
+        android:drawableLeft="@drawable/folder_mult_outline"
+        android:drawablePadding="10dp"
         android:id="@+id/tvGroup"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="15dp"
-        android:textColor="@color/oBlue"
+        android:textColor="@color/darkText"
         android:paddingLeft="@dimen/link_pad_left"
         android:textSize="@dimen/link_text_size"
-        android:textStyle="bold"/>
+        android:fontFamily="sans-serif"/>
 
 </LinearLayout>
