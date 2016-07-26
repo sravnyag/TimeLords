@@ -33,6 +33,25 @@ public class Gbl {
     //list to hold all project names
     public static ArrayList<String> list_of_projects = new ArrayList<String>();
 
+    //list of possible priority levels
+    public static ArrayList<String> priority_levels = new
+            ArrayList<String>(){{
+                add("High");
+                add("Med");
+                add("Low");
+                add("later...");
+            }};
+
+    //list of possible tags
+    public static ArrayList<String> tags = new
+            ArrayList<String>(){{
+                add("Work");
+                add("Home");
+                add("Sports");
+                add("Friends");
+                add("Family");
+            }};
+
     //need better database to hold projects..searchable for name to retrieve project
     public static ArrayList<ProjectList> allProjectsDatabase = new ArrayList<ProjectList>();
 

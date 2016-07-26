@@ -3,6 +3,7 @@ package com.example.bhouts.taskplanner;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -35,6 +36,21 @@ public class HomeScreen extends AppCompatActivity {
     public void newTask(View view) {
         Intent go_ditTask = new Intent(this, ditTask.class);
         startActivity(go_ditTask);
+        /////////////test code ////////////////////////////////////////////////////////////
+        DatabaseClass dbc = new DatabaseClass(getApplicationContext());
+        Cursor cursor = dbc.getProjects();
+        cursor.moveToFirst();
+        String temp = cursor.getString(1);
+        //dbc.deleteProject(temp);
+        cursor = dbc.getProjects();
+        int count = cursor.getCount();
+        String message = String.valueOf(count);
+        Toast.makeText(this,"cursor successfully reached first row",Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
+
+        dbc.close();
+        //////////////////////////////////////////////////////////////////////////
     }
 
     //called when fab button pushed/ when project from collapsible list is pushed

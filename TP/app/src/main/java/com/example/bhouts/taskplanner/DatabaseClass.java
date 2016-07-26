@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import android.widget.Toast;
-import android.util.Log;
+
 
 // need to import DatabaseOperations
 
@@ -24,19 +24,17 @@ public class DatabaseClass extends SQLiteOpenHelper {
 
     public static final String COLUMN_ID = "_id";
     public static final String COLUMN_NAME = "projectname";
-    public static final String COLUMN_QUANTITY = "quantity";
 
 
-    public DatabaseClass(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, DATABASE_NAME, factory, DATABASE_VERSION);
+    public DatabaseClass(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase dB) {
         String CREATE_TABLE_CLASS = "CREATE TABLE " + TABLE + "(" +
-                COLUMN_ID + " " + "INTEGER PRIMARY KEY," +
-                COLUMN_NAME + " TEXT," + ")";
-//                COLUMN_QUANTITY + " INTEGER," + ")";
+                COLUMN_ID + "INTEGER PRIMARY KEY," +
+                COLUMN_NAME + " TEXT" + ")";
 
 
         dB.execSQL(CREATE_TABLE_CLASS);
@@ -49,32 +47,12 @@ public class DatabaseClass extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void addProject(Project mProject) {
-
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_NAME, mProject.getProjName());
-//        values.put(COLUMN_QUANTITY, mProject.getQuantity());
-
-
+    public void addProject(Project project) {
         SQLiteDatabase db = this.getWritableDatabase();
-
-        db.insert(TABLE, null, values);
-        db.close();
-        Log.d("addProject database", "values stored in database");
-    }
-
-
-    public void addQuantity(String name) {
-        String query = "Select * FROM " + TABLE + " WHERE " + COLUMN_NAME + " =  \"" + name + "\"";
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(query, null);
-        cursor.moveToFirst();
         ContentValues values = new ContentValues();
+        values.put(COLUMN_NAME, project.getProjName());
 
-        values.put(COLUMN_QUANTITY, cursor.getInt(cursor.getColumnIndex(COLUMN_QUANTITY)) + 1);
-
-        db.update(TABLE, values, COLUMN_NAME + " = '" + name + "'", null);
-        cursor.close();
+        db.insert("projects", null, values);
         db.close();
     }
 
@@ -89,27 +67,36 @@ public class DatabaseClass extends SQLiteOpenHelper {
     }
 
 
-
-    public void decrementQuantity(String projectname) {
-        String query = "Select * FROM " + TABLE + " WHERE " + COLUMN_NAME + " =  \"" + projectname + "\"";
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(query, null);
-        cursor.moveToFirst();
-        ContentValues values = new ContentValues();
-
-        values.put(COLUMN_QUANTITY, cursor.getInt(cursor.getColumnIndex(COLUMN_QUANTITY)) - 1);
-
-        db.update(TABLE, values, COLUMN_NAME + " = '" + projectname + "'", null);
-        cursor.close();
-        db.close();
-    }
-
     public Cursor getProjects() {
         SQLiteDatabase db = this.getReadableDatabase();
-        String selectQuery = "SELECT " + COLUMN_ID + ", " + COLUMN_NAME + ", " + COLUMN_QUANTITY + " FROM " + TABLE;
+        //String selectQuery = "SELECT " + COLUMN_ID + ", " + COLUMN_NAME + " FROM " + TABLE;
+        String selectQuery = "SELECT * FROM " + TABLE;
         Cursor cursor =  db.rawQuery(selectQuery, null);
-        cursor.moveToFirst();
+        //cursor.moveToFirst();
         return cursor;
+    }
+    public boolean deleteProject(String projname) {
+
+        boolean result = false;
+
+        String query = "Select * FROM " + TABLE + " WHERE " + COLUMN_NAME + " =  \"" + projname + "\"";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        Cursor cursor = db.rawQuery(query, null);
+
+        Project mProj = new Project(projname);
+
+        if (cursor.moveToFirst()) {
+            mProj.setID(Integer.parseInt(cursor.getString(0)));
+            db.delete(TABLE, COLUMN_ID + " = ?",
+                    new String[] { String.valueOf(mProj.getID()) });
+            cursor.close();
+            result = true;
+        }
+        db.close();
+
+        return result;
     }
 
 
