@@ -32,8 +32,11 @@ public class ditTask extends AppCompatActivity {
         String taskName1 = taskName.getText().toString();
 
         //get the name of the task's project
-        final EditText projectName =  (EditText) findViewById(R.id.projectAttName);
-        String projectName1 = projectName.getText().toString();
+        /*final EditText projectName =  (EditText) findViewById(R.id
+                .projectAttName);
+        String projectName1 = projectName.getText().toString();*/
+        Spinner spinner = (Spinner)findViewById(R.id.project_choice);
+        String projectName1  = spinner.getSelectedItem().toString();
 
         //get the task's notes
         final EditText notes =  (EditText) findViewById(R.id.notes);
@@ -92,38 +95,29 @@ public class ditTask extends AppCompatActivity {
     private Spinner tag;
 
     // dynamically set spinner elements
-    public void populatePrioritySpinner(Spinner spinner1,
-                                        Spinner spinner2) {
-        List<String> priority_list = new ArrayList<String>();
-        priority_list.add("High");
-        priority_list.add("Med");
-        priority_list.add("Low");
-        ArrayAdapter<String> dataAdapter1 =
+    public void populatePrioritySpinner(Spinner project_spinner,
+                                        Spinner priority_spinner,
+                                        Spinner tag_spinner) {
+        ArrayAdapter<String> priorityAdapter =
                 new ArrayAdapter<String>(this, android.R.layout
-                        .simple_spinner_item, priority_list);
-        dataAdapter1.setDropDownViewResource(android.R.layout
+                        .simple_spinner_item, Gbl.priority_levels);
+        priorityAdapter.setDropDownViewResource(android.R.layout
                 .simple_spinner_dropdown_item);
-        spinner1.setAdapter(dataAdapter1);
+        priority_spinner.setAdapter(priorityAdapter);
 
-        List<String> tag_list = new ArrayList<String>();
-        tag_list.add("tag 1");
-        tag_list.add("tag 2");
-        tag_list.add("tag 3");
-        tag_list.add("tag 1");
-        tag_list.add("tag 2");
-        tag_list.add("tag 3");
-        tag_list.add("tag 1");
-        tag_list.add("tag 2");
-        tag_list.add("tag 3");
-        tag_list.add("tag 1");
-        tag_list.add("tag 2");
-        tag_list.add("tag 3");
-        ArrayAdapter<String> dataAdapter2 =
+        ArrayAdapter<String> tagAdapter =
                 new ArrayAdapter<String>(this, android.R.layout
-                        .simple_spinner_item, tag_list);
-        dataAdapter2.setDropDownViewResource(android.R.layout
+                        .simple_spinner_item, Gbl.tags);
+        tagAdapter.setDropDownViewResource(android.R.layout
                 .simple_spinner_dropdown_item);
-        spinner2.setAdapter(dataAdapter2);
+        tag_spinner.setAdapter(tagAdapter);
+
+        ArrayAdapter<String> projectAdapter =
+                new ArrayAdapter<String>(this, android.R.layout
+                        .simple_spinner_item, Gbl.list_of_projects);
+        projectAdapter.setDropDownViewResource(android.R.layout
+                .simple_spinner_dropdown_item);
+        project_spinner.setAdapter(projectAdapter);
     }
 
     @Override
@@ -133,11 +127,10 @@ public class ditTask extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-        // set example spinners
+        // set spinners
+        Spinner project = (Spinner) findViewById(R.id.project_choice);
         Spinner priority = (Spinner) findViewById(R.id.priority_choice);
         Spinner tag = (Spinner) findViewById(R.id.tag_choice);
-        populatePrioritySpinner(priority, tag); // run test list
-
+        populatePrioritySpinner(project, priority, tag);
     }
 }
