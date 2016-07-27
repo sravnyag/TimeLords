@@ -2345,8 +2345,8 @@ containing a value of this type.
         public static final int exitUntilCollapsed=0x7f0c0017;
         public static final int expand_activities_button=0x7f0c003e;
         public static final int expanded_menu=0x7f0c0051;
-        public static final int fab_project=0x7f0c006c;
-        public static final int fab_show=0x7f0c006b;
+        public static final int fab_project=0x7f0c006b;
+        public static final int fab_show=0x7f0c006c;
         public static final int fab_task=0x7f0c006a;
         public static final int fill=0x7f0c002e;
         public static final int fill_horizontal=0x7f0c002f;

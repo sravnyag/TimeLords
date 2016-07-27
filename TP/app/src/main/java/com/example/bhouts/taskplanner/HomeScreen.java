@@ -65,6 +65,13 @@ public class HomeScreen extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        if(Gbl.list_of_projects.isEmpty()){
+            //create dump
+            Project dump = new Project("Dump");
+            Gbl.dump = dump;
+            Gbl.allProjectsDatabase.add(Gbl.dump);
+        }
+
       /*  if (stop == true) {
            // Project createDump = new Project("Dump");
            // Gbl.dump = createDump;

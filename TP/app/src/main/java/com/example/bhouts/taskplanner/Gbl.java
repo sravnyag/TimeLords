@@ -29,6 +29,8 @@ public class Gbl {
         Gbl.hidden = Boolean.TRUE;
     }
 
+    public static ProjectList dump = new ProjectList();
+
     //gbl varibale to pass the name of a project to so can display on editProjects header
     public static String passProjName = "New Project";
 

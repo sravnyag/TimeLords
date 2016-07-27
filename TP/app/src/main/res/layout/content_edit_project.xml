@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:text="ENTER"
         android:layout_below="@+id/project_task_list"
-        android:onClick="goHSfromProj"/>
+        android:onClick="projEnter"/>
 
 
 </LinearLayout>

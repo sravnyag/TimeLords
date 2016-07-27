@@ -28,25 +28,33 @@ public class editProject extends  AppCompatActivity {
     }
 
     //called when user clicks "ENTER" button
-    public void goHSfromProj(View view) {
-        final EditText projectName =  (EditText) findViewById(R.id.projectName);
+    public void projEnter(View view) {
+        final EditText projectName = (EditText) findViewById(R.id.projectName);
         String projectName1 = projectName.getText().toString();
 
-        //create new project with this name if doesn't already exist
-        if (!Gbl.isProject(projectName1)){
-            Project newProject = new Project(projectName1);
- //////////////////////////////////////////////////////////////////////////
-         //   ProjectDBObj obj = new ProjectDBObj(newProject);
-         //   obj.save();
- //////////////////////////////////////////////////////////////////////////
-            //add to all projects Database
-            Gbl.allProjectsDatabase.add(newProject);
+        if (projectName.equals("")) {
+            Toast.makeText(this,"Please enter a Project",Toast.LENGTH_SHORT).show();
+        } else {
+
+            //create new project with this name if doesn't already exist
+            if (!Gbl.isProject(projectName1)) {
+                Project newProject = new Project(projectName1);
+                //////////////////////////////////////////////////////////////////////////
+                //   ProjectDBObj obj = new ProjectDBObj(newProject);
+                //   obj.save();
+                //////////////////////////////////////////////////////////////////////////
+                //add to all projects Database
+                Gbl.allProjectsDatabase.add(newProject);
+            }
+            //hide fab buttons on homescreen
+            Gbl.hide_fab();
+            //go to homescreen
+            Intent goHome = new Intent(this, HomeScreen.class);
+            startActivity(goHome);
         }
-        //hide fab buttons on homescreen
-        Gbl.hide_fab();
-        //go to homescreen
-        Intent goHome = new Intent(this, HomeScreen.class);
-        startActivity(goHome);
+
+
+
 
     }
 
