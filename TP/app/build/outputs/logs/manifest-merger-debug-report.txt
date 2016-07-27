@@ -1,175 +1,175 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:2:1-82:12
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:2:1-82:12
 	package
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:3:5-45
-		INJECTED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:3:5-45
+		INJECTED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml
 application
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:5:5-80:19
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:5:5-80:19
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:9:9-27
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:9:9-27
 	android:supportsRtl
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:10:9-35
 	android:allowBackup
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:7:9-35
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:7:9-35
 	android:icon
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:8:9-42
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:8:9-42
 	android:theme
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:11:9-40
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:11:9-40
 	android:name
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:6:9-40
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:6:9-40
 meta-data#DATABASE
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:12:9-14:42
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:12:9-14:42
 	android:value
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:14:13-39
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:14:13-39
 	android:name
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:13:13-36
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:13:13-36
 meta-data#VERSION
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:15:9-17:33
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:15:9-17:33
 	android:value
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:17:13-30
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:17:13-30
 	android:name
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:16:13-35
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:16:13-35
 meta-data#QUERY_LOG
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:18:9-20:36
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:18:9-20:36
 	android:value
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:20:13-33
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:20:13-33
 	android:name
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:19:13-37
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:19:13-37
 meta-data#DOMAIN_PACKAGE_NAME
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:21:9-23:43
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:21:9-23:43
 	android:value
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:23:13-40
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:23:13-40
 	android:name
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:22:13-47
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:22:13-47
 activity#com.example.bhouts.taskplanner.HomeScreen
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:25:9-34:20
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:25:9-34:20
 	android:label
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:27:13-45
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:27:13-45
 	android:theme
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:28:13-56
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:28:13-56
 	android:name
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:26:13-39
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:26:13-39
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:29:13-33:29
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:29:13-33:29
 action#android.intent.action.MAIN
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:30:17-69
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:30:25-66
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:32:17-77
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:32:27-74
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:32:27-74
 activity#com.example.bhouts.taskplanner.ditTask
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:35:9-43:20
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:35:9-43:20
 	android:label
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:37:13-60
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:37:13-60
 	android:parentActivityName
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:38:13-53
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:38:13-53
 	android:theme
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:39:13-56
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:39:13-56
 	android:name
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:36:13-36
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:36:13-36
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:40:13-42:77
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:40:13-42:77
 	android:value
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:42:17-74
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:42:17-74
 	android:name
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:41:17-63
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:41:17-63
 activity#com.example.bhouts.taskplanner.editProject
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:44:9-52:20
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:44:9-52:20
 	android:label
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:46:13-64
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:46:13-64
 	android:parentActivityName
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:47:13-53
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:47:13-53
 	android:theme
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:48:13-56
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:48:13-56
 	android:name
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:45:13-40
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:45:13-40
 activity#com.example.bhouts.taskplanner.Dump
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:53:9-61:20
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:53:9-61:20
 	android:label
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:55:13-56
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:55:13-56
 	android:parentActivityName
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:56:13-53
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:56:13-53
 	android:theme
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:57:13-56
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:57:13-56
 	android:name
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:54:13-33
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:54:13-33
 activity#com.example.bhouts.taskplanner.Urgent
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:62:9-70:20
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:62:9-70:20
 	android:label
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:64:13-58
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:64:13-58
 	android:parentActivityName
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:65:13-53
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:65:13-53
 	android:theme
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:66:13-44
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:66:13-44
 	android:name
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:63:13-35
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:63:13-35
 activity#com.example.bhouts.taskplanner.qTest
-ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:71:9-79:20
+ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:71:9-79:20
 	android:label
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:73:13-58
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:73:13-58
 	android:parentActivityName
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:74:13-53
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:74:13-53
 	android:theme
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:75:13-44
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:75:13-44
 	android:name
-		ADDED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml:72:13-34
+		ADDED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml:72:13-34
 uses-sdk
-INJECTED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.github.satyan:sugar:1.4] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.github.satyan/sugar/1.4/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-v4:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+INJECTED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.github.satyan:sugar:1.4] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.github.satyan\sugar\1.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:23.4.0] /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Julia\School\TimeLords\TP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/sergiy/AndroidStudioProjects/TL/TimeLords/TP/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Julia\School\TimeLords\TP\app\src\main\AndroidManifest.xml
