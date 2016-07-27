@@ -8,6 +8,10 @@
         "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_q_test.xml",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\layout\\content_q_test.xml"
+    },
+    {
         "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
         "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_view.xml"
     },
@@ -58,6 +62,10 @@
     {
         "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_q_test.xml",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\layout\\activity_q_test.xml"
     },
     {
         "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",

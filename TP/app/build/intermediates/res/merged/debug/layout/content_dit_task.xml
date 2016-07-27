@@ -116,7 +116,7 @@
         android:text="@string/enter"
         android:id="@+id/task_enter"
         android:layout_alignParentBottom="true"
-        android:onClick="goHSfromTask"/>
+        android:onClick="enterTask"/>
 
     <Spinner
         android:layout_width="wrap_content"

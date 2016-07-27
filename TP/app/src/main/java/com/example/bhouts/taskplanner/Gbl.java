@@ -31,6 +31,8 @@ public class Gbl {
 
     public static ProjectList dump = new ProjectList();
 
+    public static ProjectList urgent = new ProjectList();
+
     //gbl varibale to pass the name of a project to so can display on editProjects header
     public static String passProjName = "New Project";
 

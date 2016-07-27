@@ -38,12 +38,12 @@ public interface TaskInterface {
     // setDueDate - this
     // pre: none
     // post: sets DueDate attribute for a task obj
-    public void setDueDate(Date userInput);
+    public void setDueDate(String userInput);
 
     // setDueDate
     // pre: none
     // post: sets DueDate attribute for a task obj
-    public void setDueDate(Task task, Date userInput);
+    public void setDueDate(Task task, String userInput);
 
     // setDuration
     // pre: none
@@ -107,6 +107,6 @@ public interface TaskInterface {
     // pre: none
     // post:
     // notes:
-    public abstract Date getDueDate();
+    public abstract String getDueDate();
 
 }

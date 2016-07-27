@@ -51,7 +51,7 @@ public class Task extends SugarRecord implements TaskInterface{
     public Duration duration;
     public Tags tagList;
     public Date dateCreated;
-    public Date dateDue;
+    public String dateDue;
 
 
     // private helper functions --------------------------------------------------------------------
@@ -130,14 +130,14 @@ public class Task extends SugarRecord implements TaskInterface{
     // setDueDate - this
     // pre: none
     // post: sets DueDate attribute for a task obj
-    public void setDueDate(Date userInput){
+    public void setDueDate(String userInput){
         this.dateDue = userInput;
     }
 
     // setDueDate
     // pre: none
     // post: sets DueDate attribute for a task obj
-    public void setDueDate(Task task, Date userInput){
+    public void setDueDate(Task task, String userInput){
         task.dateDue = userInput;
     }
 
@@ -232,7 +232,7 @@ public class Task extends SugarRecord implements TaskInterface{
     // pre: none
     // post:
     // notes:
-    public Date getDueDate(){
+    public String getDueDate(){
         return dateDue;
     }
 

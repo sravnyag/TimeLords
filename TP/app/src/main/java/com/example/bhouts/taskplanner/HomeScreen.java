@@ -58,6 +58,12 @@ public class HomeScreen extends AppCompatActivity {
         startActivity(go_urg);
     }
 
+    //called when Urgent button pushed..send to urgent page
+    public void goQuikTask(View view) {
+        Intent go_q = new Intent(this, qTest.class);
+        startActivity(go_q);
+    }
+
 
     //variables for collapsible project list
     private ExpandListAdapter ExpAdapter;
@@ -76,6 +82,11 @@ public class HomeScreen extends AppCompatActivity {
             Project dump = new Project("Dump");
             Gbl.dump = dump;
             Gbl.allProjectsDatabase.add(Gbl.dump);
+
+            //create urgent
+            Project urg = new Project("Urgent");
+            Gbl.urgent = urg;
+            Gbl.allProjectsDatabase.add(Gbl.urgent);
         }
 
       /*  if (stop == true) {
@@ -115,6 +126,7 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Gbl.passProjName = "New Project";
+                Gbl.passTaskName= "New Task";
                 if (Gbl.hidden == Boolean.TRUE) {
                     Gbl.fab_task.show();
                     Gbl.fab_project.show();

@@ -16,7 +16,7 @@ public class Urgent extends AppCompatActivity {
 
     View.OnClickListener listener2 = null;
     Button button2;
-    String[] values = Gbl.dump.getTaskList();
+    String[] values = Gbl.urgent.getTaskList();
     ListView listView ;
 
     //called when list item is pushed

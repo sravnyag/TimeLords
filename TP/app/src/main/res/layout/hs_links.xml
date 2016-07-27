@@ -3,12 +3,13 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.view.menu.ActionMenuItemView
+    <!--<android.support.v7.view.menu.ActionMenuItemView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" />-->
     <Button
         android:drawableLeft="@drawable/inbox"
         android:drawablePadding="10dp"
+        android:textAllCaps="false"
         android:id="@+id/dump_link"
         android:layout_width="match_parent"
         android:layout_height="@dimen/link_height"
@@ -28,6 +29,7 @@
         android:drawableLeft="@drawable/timer_dark"
         android:drawablePadding="10dp"
         android:id="@+id/qTasks_link"
+        android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="@dimen/link_height"
         android:text="Quick Tasks"
@@ -41,12 +43,13 @@
         android:layout_above="@+id/urgent_link"
         android:layout_below="@+id/dump_link"
         android:elevation="5dp"
-        android:onClick="goDump"/>
+        android:onClick="goQuikTask"/>
 
     <Button
         android:drawableLeft="@drawable/flag_variant"
         android:drawablePadding="10dp"
         android:id="@+id/urgent_link"
+        android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="@dimen/link_height"
         android:text="Urgent"

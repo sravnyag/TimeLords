@@ -307,6 +307,7 @@
     <string name="title_activity_dit_task">editTask</string>
     <string name="title_activity_dump">Dump</string>
     <string name="title_activity_edit_project">temp</string>
+    <string name="title_activity_q_test">qTest</string>
     <string name="title_activity_urgent">Urgent</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
