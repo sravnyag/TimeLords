@@ -18,7 +18,7 @@ public class Dump extends AppCompatActivity {
 
     View.OnClickListener listener2 = null;
     Button button2;
-    String[] values = new String[] { "item1","item2","item3"};
+    String[] values = Gbl.dump.getTaskList();
     ListView listView ;
 
     //called when list item is pushed

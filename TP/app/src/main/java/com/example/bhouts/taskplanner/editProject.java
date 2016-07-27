@@ -32,27 +32,43 @@ public class editProject extends  AppCompatActivity {
         final EditText projectName = (EditText) findViewById(R.id.projectName);
         String projectName1 = projectName.getText().toString();
 
-        if (projectName.equals("")) {
-            Toast.makeText(this,"Please enter a Project",Toast.LENGTH_SHORT).show();
-        } else {
+        //check if creating new project or editing existing
+        if (Gbl.passProjName.equals("New Project")) {
+            //make sure user entered something
+            if (projectName1.equals("")) {
+                Toast.makeText(this, "Please enter a Project", Toast.LENGTH_SHORT).show();
+            } else {
 
-            //create new project with this name if doesn't already exist
-            if (!Gbl.isProject(projectName1)) {
-                Project newProject = new Project(projectName1);
-                //////////////////////////////////////////////////////////////////////////
-                //   ProjectDBObj obj = new ProjectDBObj(newProject);
-                //   obj.save();
-                //////////////////////////////////////////////////////////////////////////
-                //add to all projects Database
-                Gbl.allProjectsDatabase.add(newProject);
+                //create new project with this name if doesn't already exist
+                if (!Gbl.isProject(projectName1)) {
+                    Project newProject = new Project(projectName1);
+                    //////////////////////////////////////////////////////////////////////////
+                    //   ProjectDBObj obj = new ProjectDBObj(newProject);
+                    //   obj.save();
+                    //////////////////////////////////////////////////////////////////////////
+                    //add to all projects Database
+                    Gbl.allProjectsDatabase.add(newProject);
+                }
+                //hide fab buttons on homescreen
+                Gbl.hide_fab();
+                //go to homescreen
+                goHome();
             }
-            //hide fab buttons on homescreen
-            Gbl.hide_fab();
-            //go to homescreen
-            Intent goHome = new Intent(this, HomeScreen.class);
-            startActivity(goHome);
-        }
+        //else editing project name
+        }else{
+            //pressing enter on existing project with no changes simply sends user home
+            if (projectName.equals("")) {
+                goHome();
+            //else user entered something so should change that projects name
+            } else {
+                Gbl.getProjWithName(Gbl.passProjName).setProjName(Gbl.getProjWithName(Gbl.passProjName),(projectName1));
+                int pos = Gbl.getPos(Gbl.passProjName);
+                //must also change proj name in list_of_projects
+                Gbl.list_of_projects.set(pos, projectName1);
 
+                goHome();
+            }
+        }
 
 
 
@@ -60,6 +76,11 @@ public class editProject extends  AppCompatActivity {
 
     public String getProjName(){
         return Gbl.passProjName;
+    }
+
+    public void goHome(){
+        Intent goHome = new Intent(this, HomeScreen.class);
+        startActivity(goHome);
     }
 
 

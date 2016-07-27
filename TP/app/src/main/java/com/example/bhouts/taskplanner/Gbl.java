@@ -76,6 +76,12 @@ public class Gbl {
         //return Gbl.list_of_projects.contains(name);
     }
 
+    //return projectList with associated name
+    public static ProjectList getProjWithName(String name){
+        int pos = getPos(name);
+        return Gbl.allProjectsDatabase.get(pos);
+    }
+
     //get position in ArrayList of project
     public static int getPos(String projName) {
         int size = Gbl.list_of_projects.size();
