@@ -29,7 +29,7 @@ import android.widget.Toast;
 
 
 public class HomeScreen extends AppCompatActivity {
-
+    private boolean stop = true;
     OnClickListener listener1 = null;
     Button button1;
 
@@ -38,25 +38,10 @@ public class HomeScreen extends AppCompatActivity {
     public void newTask(View view) {
         Intent go_ditTask = new Intent(this, ditTask.class);
         startActivity(go_ditTask);
-        /////////////test code ////////////////////////////////////////////////////////////
-        DatabaseClass dbc = new DatabaseClass(getApplicationContext());
-        Cursor cursor = dbc.getProjects();
-        cursor.moveToFirst();
-        String temp = cursor.getString(1);
-        //dbc.deleteProject(temp);
-        cursor = dbc.getProjects();
-        int count = cursor.getCount();
-        String message = String.valueOf(count);
-        Toast.makeText(this,"cursor successfully reached first row",Toast.LENGTH_SHORT).show();
-
-        Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
-
-        dbc.close();
-        //////////////////////////////////////////////////////////////////////////
     }
 
     //called when fab button pushed/ when project from collapsible list is pushed
-    public void newProject(View view){
+    public void newProject(View view) {
         Intent go_editProject = new Intent(this, editProject.class);
         startActivity(go_editProject);
     }
@@ -80,7 +65,27 @@ public class HomeScreen extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //expandable project list
+      /*  if (stop == true) {
+           // Project createDump = new Project("Dump");
+           // Gbl.dump = createDump;
+           // Gbl.allProjectsDatabase.add(Gbl.dump);
+           // Gbl.dump = createDump;
+            ProjectDBObj db = new ProjectDBObj();
+            List<ProjectDBObj> listDB = ProjectDBObj.listAll(ProjectDBObj.class);
+            if (!listDB.isEmpty()) {
+                for(int i=0; i<listDB.size(); i++) {
+                    Project temp = listDB.get(i).getProject();
+                    Gbl.allProjectsDatabase.add(temp);
+                    Gbl.list_of_projects.add(listDB.get(i).getProjectName());
+                }
+            }
+            stop = false;
+
+
+        }   */
+
+
+            //expandable project list
         ExpandList = (ExpandableListView) findViewById(R.id.ExpList);
         ExpListItems = SetStandardGroups();
         ExpAdapter = new ExpandListAdapter(HomeScreen.this, ExpListItems);
@@ -93,16 +98,15 @@ public class HomeScreen extends AppCompatActivity {
         //initially hide these two fabs
         Gbl.fab_task.hide();
         Gbl.fab_project.hide();
-        Gbl.
-        listener1 = new OnClickListener(){
+        listener1 = new OnClickListener() {
             @Override
             public void onClick(View v) {
                 Gbl.passProjName = "New Project";
-                if (Gbl.hidden == Boolean.TRUE){
+                if (Gbl.hidden == Boolean.TRUE) {
                     Gbl.fab_task.show();
                     Gbl.fab_project.show();
                     Gbl.hidden = Boolean.FALSE;
-                }else {
+                } else {
                     Gbl.fab_task.hide();
                     Gbl.fab_project.hide();
                     Gbl.hidden = Boolean.TRUE;
@@ -144,13 +148,48 @@ public class HomeScreen extends AppCompatActivity {
 
         ExpandListGroup grup = new ExpandListGroup();
         grup.setName("Projects");
-
-        for (int i=0;i<Gbl.list_of_projects.size();i++){
+        // ProjectDBObj db = new ProjectDBObj();
+        // List<ProjectDBObj> listDB = ProjectDBObj.listAll(ProjectDBObj.class);
+        //if (!listDB.isEmpty()) {
+        //    for(int i=0; i<listDB.size(); i++) {
+        //        Project temp = listDB.get(i).getProject();
+        //        Gbl.list_of_projects.add(temp.getProjName());
+        //    }
+        //}
+        //int count = listDB.size();
+        //String test = String.valueOf(count);
+        //Toast.makeText(this,test,Toast.LENGTH_SHORT).show();
+        //System.out.println("hello");
+      /*  for (int i=0;i<listDB.size();i++){
+            System.out.println("hello");
+            final ExpandListChild ch = new ExpandListChild();
+            String name = listDB.get(i).getProjectName();
+            ch.setName(name);
+            chList.add(ch);
+*/
+        for (int i = 0; i < Gbl.list_of_projects.size(); i++) {
             final ExpandListChild ch = new ExpandListChild();
             String name = Gbl.list_of_projects.get(i);
             ch.setName(name);
             chList.add(ch);
 
+/*
+            ExpandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+                @Override
+                public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                    System.out.print("kill me");
+                    ProjectDBObj db = new ProjectDBObj();
+                    System.out.print("kill me 2");
+                    List<ProjectDBObj> listDB = ProjectDBObj.listAll(ProjectDBObj.class);
+                    System.out.print("kill me 3");
+                    Gbl.passProjName = listDB.get(childPosition).getProjectName();
+                    System.out.print("kill me 4");
+                    newProject(ExpandList);
+                    System.out.print("kill me as well");
+                    return false;
+                }
+
+            });  */
             //listview on child click listener
             ExpandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
                 @Override
@@ -170,5 +209,6 @@ public class HomeScreen extends AppCompatActivity {
 
         return grList;
     }
-
 }
+
+

@@ -14,7 +14,8 @@
         android:paddingTop="@dimen/link_pad_top"
         android:paddingLeft="@dimen/link_pad_left"
         android:gravity="left"
-        android:layout_above="@+id/qTasks_link" />
+        android:layout_above="@+id/qTasks_link"
+        android:onClick="goDump"/>
 
     <Button
         android:id="@+id/qTasks_link"
@@ -28,7 +29,8 @@
         android:paddingLeft="@dimen/link_pad_left"
         android:gravity="left"
         android:layout_below="@+id/dump_link"
-        android:layout_above="@+id/urgent_link"/>
+        android:layout_above="@+id/urgent_link"
+        android:onClick="goDump"/>
 
     <Button
         android:id="@+id/urgent_link"
@@ -42,7 +44,8 @@
         android:paddingLeft="@dimen/link_pad_left"
         android:gravity="left"
         android:layout_below="@+id/qTasks_link"
-        android:layout_above="@+id/test" />
+        android:layout_above="@+id/test"
+        android:onClick="goDump"/>
 
 
 </LinearLayout>

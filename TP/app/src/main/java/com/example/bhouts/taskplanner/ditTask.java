@@ -31,6 +31,7 @@ public class ditTask extends AppCompatActivity {
         final EditText taskName =  (EditText) findViewById(R.id.taskName);
         String taskName1 = taskName.getText().toString();
 
+
         //get the name of the task's project
         /*final EditText projectName =  (EditText) findViewById(R.id
                 .projectAttName);

@@ -1,4 +1,6 @@
 package com.example.bhouts.taskplanner;
+import com.orm.SugarRecord;
+
 import java.util.*;
 import java.lang.Object;
 
@@ -10,7 +12,7 @@ import javax.xml.datatype.Duration;
  */
 
 
-public class Task implements TaskInterface{
+public class Task extends SugarRecord implements TaskInterface{
 
     // private inner Priority class
     private class Priority {

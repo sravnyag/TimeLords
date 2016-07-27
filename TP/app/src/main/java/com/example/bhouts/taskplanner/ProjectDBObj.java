@@ -11,10 +11,12 @@ import java.util.List;
 public class ProjectDBObj extends SugarRecord {
 
     String projectName;
+    Project proj;
 
     public ProjectDBObj(){}
     public ProjectDBObj(Project project){
         this.projectName = project.ProjName;
+        this.proj = project;
     }
 
     public static ArrayList<Project> convertToProjects(){
@@ -25,4 +27,20 @@ public class ProjectDBObj extends SugarRecord {
         }
         return converted;
     }
+    public Project getProject() {
+        return proj;
+    }
+    public String getProjectName() {
+        return projectName;
+    }
+    /*public Project findProject(String name) {
+        List<ProjectDBObj> projects = ProjectDBObj.listAll(ProjectDBObj.class);
+        for(int i=0;i<projects.size();i++) {
+            if(name.equals(projects.get(i).getProject().getProjName())) {
+                return projects.get(i).getProject();
+            }
+        }
+    }    */
+
+
 }

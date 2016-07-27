@@ -79,6 +79,10 @@ public class ProjectList implements ProjectListInterface{
     // post:
     // notes:
     public int getTaskListSize(){
+        int zero = 0;
+        if (TaskList == null){
+            return 0;
+        }
         return TaskList.size();
     }
 

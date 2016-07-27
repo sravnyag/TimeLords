@@ -9,6 +9,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,7 +21,11 @@ import java.util.List;
 
 public class editProject extends  AppCompatActivity {
 
-
+    /*called when task list item is pushed*/
+    public void goTask(View view) {
+        Intent go_ditTask = new Intent(this, ditTask.class);
+        startActivity(go_ditTask);
+    }
 
     //called when user clicks "ENTER" button
     public void goHSfromProj(View view) {
@@ -30,10 +35,11 @@ public class editProject extends  AppCompatActivity {
         //create new project with this name if doesn't already exist
         if (!Gbl.isProject(projectName1)){
             Project newProject = new Project(projectName1);
-            ProjectDBObj obj = new ProjectDBObj(newProject);
-            obj.save();
+ //////////////////////////////////////////////////////////////////////////
+         //   ProjectDBObj obj = new ProjectDBObj(newProject);
+         //   obj.save();
+ //////////////////////////////////////////////////////////////////////////
             //add to all projects Database
-
             Gbl.allProjectsDatabase.add(newProject);
         }
         //hide fab buttons on homescreen
@@ -67,21 +73,33 @@ public class editProject extends  AppCompatActivity {
         if (!Gbl.passProjName.equals("New Project")){
             size = Gbl.allProjectsDatabase.get(i).getTaskListSize();
         }else{
-            size = 1;
+            size = 0;
         }
         String[] taskList = new String[size];
         if (!Gbl.passProjName.equals("New Project")){
             taskList = Gbl.allProjectsDatabase.get(i).getTaskList();
-        }else{
-            taskList[0] = "";
         }
 
-        //set the list of tasks for the project page
-        ArrayAdapter<String> myAdapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, taskList);
+        final ListView listView = (ListView) findViewById(R.id.project_task_list);
 
-        ListView list_of_tasks=(ListView) findViewById(R.id.project_task_list);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, android.R.id.text1, taskList);
 
-        list_of_tasks.setAdapter(myAdapter);
+        // Assign adapter to ListView
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // ListView Clicked item index
+                int itemPosition = position;
+
+                // ListView Clicked item value
+                String itemValue = (String) listView.getItemAtPosition(position);
+                Gbl.passTaskName = itemValue;
+                goTask(listView);
+            }
+        });
 
 
 

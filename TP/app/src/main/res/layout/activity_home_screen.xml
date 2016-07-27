@@ -24,11 +24,11 @@
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab_task"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            app:fabSize="mini"
-            android:layout_margin="5dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_anchor="@+id/fab_show"
+            app:layout_anchorGravity="left|bottom"
+            app:elevation="@dimen/fab_margin"
             android:src="@drawable/letter_t"
             android:onClick="newTask" />
 
@@ -36,7 +36,8 @@
             android:id="@+id/fab_project"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|end"
+            app:layout_anchor="@+id/fab_show"
+            app:layout_anchorGravity="top|end"
             app:fabSize="mini"
             android:layout_margin="@dimen/fab_margin"
             android:src="@drawable/letter_p"

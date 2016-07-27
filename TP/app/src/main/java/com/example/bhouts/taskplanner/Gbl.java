@@ -7,10 +7,16 @@ import java.util.ArrayList;
 /**
  * Created by bhouts on 7/10/2016.
  */
+
 public class Gbl {
     //variable to keep track of when project and task fabs should be hidden
     public static Boolean hidden = Boolean.TRUE;
+    //gbl variableso canexecutonce on hs start
+  /*  public static Boolean once = Boolean.FALSE;
 
+    //global prjectdump
+    public static Project dump = new Project("Dump");
+*/
     //fab buttons
     public static FloatingActionButton fab_task;
     public static FloatingActionButton fab_project;
@@ -26,6 +32,8 @@ public class Gbl {
     //gbl varibale to pass the name of a project to so can display on editProjects header
     public static String passProjName = "New Project";
 
+    //gbl varibale to pass the name of a task to so can display on editTaskss header
+    public static String passTaskName = "New Task";
 
     //Projectlist with all projects as tasklist
     public static ProjectList projList = new ProjectList();
@@ -57,7 +65,13 @@ public class Gbl {
 
     //check if project already exists via String Name
     public static boolean isProject(String name){
-        return Gbl.list_of_projects.contains(name);
+        for (int i = 0; i<allProjectsDatabase.size();i++ ) {
+            if (Gbl.allProjectsDatabase.get(i).getProjName().equals(name)){
+                return true;
+            }
+        }
+        return false;
+        //return Gbl.list_of_projects.contains(name);
     }
 
     //get position in ArrayList of project
