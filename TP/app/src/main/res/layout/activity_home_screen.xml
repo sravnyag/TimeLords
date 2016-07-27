@@ -19,40 +19,51 @@
             layout = "@layout/toolbar_layout" />
         <include layout="@layout/content_home_screen" />
 
-        <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_task"
-        app:fabSize="mini"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        android:layout_margin="5dp"
-        android:src="@drawable/mult_check"
-        android:onClick="newTask" />
+        <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                         xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                         xmlns:tools="http://schemas.android.com/tools"
+                                                         android:layout_width="match_parent"
+                                                         android:layout_height="match_parent"
+                                                         android:fitsSystemWindows="true"
+                                                         tools:context="com.example.bhouts.taskplanner.HomeScreen">
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab_project"
-            app:fabSize="mini"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:src="@drawable/folder_plus"
-            android:onClick="newProject"/>
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab_show"
-            app:fabSize="normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:src="@drawable/plus3" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_task"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_anchor="@+id/fab_show"
+                app:layout_anchorGravity="left|bottom"
+                android:layout_margin="5dp"
+                app:elevation="@dimen/fab_margin"
+                android:src="@drawable/mult_check"
+                android:onClick="newTask" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_project"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_anchor="@+id/fab_show"
+                app:layout_anchorGravity="top|right"
+                android:layout_margin="@dimen/fab_margin"
+                app:elevation="@dimen/fab_margin"
+                android:src="@drawable/folder_plus"
+                android:onClick="newProject"/>
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_show"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@drawable/plus3" />
+
+        </android.support.design.widget.CoordinatorLayout>
 
 
 
     </FrameLayout>
-
-
 
 
 </android.support.v4.widget.DrawerLayout>
