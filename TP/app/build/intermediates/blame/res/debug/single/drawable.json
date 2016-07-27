@@ -8,6 +8,10 @@
         "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\lead_pencil_light.png",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\drawable\\lead_pencil_light.png"
+    },
+    {
         "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
         "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_textfield_search_material.xml"
     },
@@ -36,6 +40,10 @@
         "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\timer_dark.png",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\drawable\\timer_dark.png"
+    },
+    {
         "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
         "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
@@ -56,8 +64,24 @@
         "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\plus3.png",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\drawable\\plus3.png"
+    },
+    {
         "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
         "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hourglass.png",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\drawable\\hourglass.png"
+    },
+    {
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star_outline_dark.png",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\drawable\\star_outline_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\folder_mult_outline.png",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\drawable\\folder_mult_outline.png"
     },
     {
         "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
@@ -96,12 +120,36 @@
         "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\folder_plus.png",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\drawable\\folder_plus.png"
+    },
+    {
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\inbox.png",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\drawable\\inbox.png"
+    },
+    {
         "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\letter_p.png",
         "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\drawable\\letter_p.png"
     },
     {
         "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
         "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\flag_variant.png",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\drawable\\flag_variant.png"
+    },
+    {
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\lead_pencil_dark.png",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\drawable\\lead_pencil_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mult_check.png",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\drawable\\mult_check.png"
+    },
+    {
+        "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\timer_light.png",
+        "source": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\src\\main\\res\\drawable\\timer_light.png"
     },
     {
         "merged": "C:\\Users\\Jeffwag\\Desktop\\TL\\TimeLords\\TP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\add_icon.png",

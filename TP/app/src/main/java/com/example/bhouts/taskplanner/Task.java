@@ -236,4 +236,6 @@ public class Task extends SugarRecord implements TaskInterface{
         return dateDue;
     }
 
+
+
 }

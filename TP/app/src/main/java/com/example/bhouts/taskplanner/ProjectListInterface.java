@@ -58,4 +58,10 @@ public interface ProjectListInterface {
     // notes:
     public abstract int getTaskListSize();
 
+    // getTaskWithName
+    // pre: proj task list contains task
+    // post:returns task with that name
+    // notes:
+    public abstract Task getTaskWithName(String name);
+
 }

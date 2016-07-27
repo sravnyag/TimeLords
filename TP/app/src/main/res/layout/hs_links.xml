@@ -3,49 +3,64 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <android.support.v7.view.menu.ActionMenuItemView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <Button
+        android:drawableLeft="@drawable/inbox"
+        android:drawablePadding="10dp"
         android:id="@+id/dump_link"
         android:layout_width="match_parent"
         android:layout_height="@dimen/link_height"
-        android:text="Dump"
-        android:background="@color/White"
-        android:textColor="@color/Blue"
+        android:text="Brain Dump"
+        android:fontFamily="sans-serif"
+        android:background="@color/lightBackground"
+        android:textColor="@color/darkText"
         android:textSize="@dimen/link_text_size"
         android:paddingTop="@dimen/link_pad_top"
         android:paddingLeft="@dimen/link_pad_left"
         android:gravity="left"
         android:layout_above="@+id/qTasks_link"
+        android:elevation="5dp"
         android:onClick="goDump"/>
 
     <Button
+        android:drawableLeft="@drawable/timer_dark"
+        android:drawablePadding="10dp"
         android:id="@+id/qTasks_link"
         android:layout_width="match_parent"
         android:layout_height="@dimen/link_height"
         android:text="Quick Tasks"
-        android:background="@color/White"
-        android:textColor="@color/oBlue"
+        android:fontFamily="sans-serif"
+        android:background="@color/lightBackground"
+        android:textColor="@color/darkText"
         android:textSize="@dimen/link_text_size"
         android:paddingTop="@dimen/link_pad_top"
         android:paddingLeft="@dimen/link_pad_left"
         android:gravity="left"
-        android:layout_below="@+id/dump_link"
         android:layout_above="@+id/urgent_link"
+        android:layout_below="@+id/dump_link"
+        android:elevation="5dp"
         android:onClick="goDump"/>
 
     <Button
+        android:drawableLeft="@drawable/flag_variant"
+        android:drawablePadding="10dp"
         android:id="@+id/urgent_link"
         android:layout_width="match_parent"
         android:layout_height="@dimen/link_height"
         android:text="Urgent"
-        android:background="@color/White"
-        android:textColor="@color/Blue"
+        android:fontFamily="sans-serif"
+        android:background="@color/lightBackground"
+        android:textColor="@color/darkText"
         android:textSize="@dimen/link_text_size"
         android:paddingTop="@dimen/link_pad_top"
         android:paddingLeft="@dimen/link_pad_left"
         android:gravity="left"
-        android:layout_below="@+id/qTasks_link"
         android:layout_above="@+id/test"
-        android:onClick="goDump"/>
+        android:layout_below="@+id/qTasks_link"
+        android:elevation="5dp"
+        android:onClick="goUrgent"/>
 
 
 </LinearLayout>

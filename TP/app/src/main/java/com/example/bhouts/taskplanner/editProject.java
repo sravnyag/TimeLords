@@ -57,7 +57,7 @@ public class editProject extends  AppCompatActivity {
         //else editing project name
         }else{
             //pressing enter on existing project with no changes simply sends user home
-            if (projectName.equals("")) {
+            if (projectName1.equals("")) {
                 goHome();
             //else user entered something so should change that projects name
             } else {

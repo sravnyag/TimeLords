@@ -31,7 +31,7 @@
         android:layout_above="@+id/project_choice"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:checked="false"/>
+        android:onClick="completeTask"/>
 
     <!--<EditText
         android:layout_width="fill_parent"

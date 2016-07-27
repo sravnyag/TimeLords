@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 
 import android.widget.Spinner;
@@ -23,6 +24,62 @@ public class ditTask extends AppCompatActivity {
 
 //    View.OnClickListener listen_task = null;
 //    Button task_enter;
+
+    public void completeTask(View view){
+        if(!Gbl.passTaskName.equals("New Task")){
+            String projName = Gbl.passProjName;
+            String taskName = Gbl.passTaskName;
+            ProjectList proj = Gbl.getProjWithName(projName);
+            Task task = proj.getTaskWithName(taskName);
+
+            task.changeComplete(task);
+        }
+    }
+
+    public void setHints(){
+
+        CheckBox comp = (CheckBox) findViewById(R.id.checkBox);
+
+        //check if new Task or existing task
+        if (Gbl.passTaskName.equals("New Task")) {
+            EditText setName = (EditText) findViewById(R.id.taskName);
+            setName.setHint("Task:");
+
+            comp.setChecked(false);
+
+            EditText setNotes = (EditText) findViewById(R.id.notes);
+            setNotes.setHint("Notes:");
+
+            EditText setDate = (EditText) findViewById(R.id.textDueDate);
+            setDate.setHint("Due Date: ");
+
+        }else {
+            String projName = Gbl.passProjName;
+            String taskName = Gbl.passTaskName;
+            ProjectList proj = Gbl.getProjWithName(projName);
+            Task task = proj.getTaskWithName(taskName);
+            String notes = task.getNotes();
+
+            EditText setName = (EditText) findViewById(R.id.taskName);
+            setName.setHint("Task: " + taskName);
+
+            EditText setNotes = (EditText) findViewById(R.id.notes);
+            setNotes.setHint("Notes: " + notes);
+
+//            EditText setDate = (EditText) findViewById(R.id.notes);
+//            setDate.setHint("Due Date:");
+
+//            Spinner projSpin = (Spinner) findViewById(R.id.project_choice);
+//            projSpin.
+
+//            //check if task complete attribute is a thing if so do it
+            if (task.isComplete(task)) {
+                comp.setChecked(true);
+            }else{
+                comp.setChecked(false);
+            }
+        }
+    }
 
     //when ENTER button clicked, go to homescreen
     public void goHSfromTask(View view) {
@@ -127,11 +184,14 @@ public class ditTask extends AppCompatActivity {
         setContentView(R.layout.activity_dit_task);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(Gbl.passTaskName);
 
         // set spinners
         Spinner project = (Spinner) findViewById(R.id.project_choice);
         Spinner priority = (Spinner) findViewById(R.id.priority_choice);
         Spinner tag = (Spinner) findViewById(R.id.tag_choice);
         populatePrioritySpinner(project, priority, tag);
+
+        setHints();
     }
 }

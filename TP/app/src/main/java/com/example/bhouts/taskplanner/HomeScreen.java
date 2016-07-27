@@ -52,6 +52,12 @@ public class HomeScreen extends AppCompatActivity {
         startActivity(go_dump);
     }
 
+    //called when Urgent button pushed..send to urgent page
+    public void goUrgent(View view) {
+        Intent go_urg = new Intent(this, Urgent.class);
+        startActivity(go_urg);
+    }
+
 
     //variables for collapsible project list
     private ExpandListAdapter ExpAdapter;

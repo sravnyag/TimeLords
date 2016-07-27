@@ -86,4 +86,16 @@ public class ProjectList implements ProjectListInterface{
         return TaskList.size();
     }
 
+    // getTaskWithName
+    // pre: proj task list contains task
+    // post:returns task with that name
+    // notes:
+    public Task getTaskWithName(String name){
+        int i = 0;
+        while(TaskList.get(i).equals(name)){
+            i++;
+        }
+        return TaskList.get(i);
+    }
+
 }
